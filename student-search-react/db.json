@@ -2,6 +2,350 @@
     "students": [
       {
         "id": 1,
+        "first_name": "John",
+        "last_name": "Smith",
+        "email": "john.smith@university.edu",
+        "phone": "(555) 123-4567",
+        "linkedin": "https://linkedin.com/in/johnsmith",
+        "github": "https://github.com/johnsmith",
+        "education": {
+          "university": "Stanford University",
+          "major": "Computer Science",
+          "minor": "Mathematics",
+          "gpa": 3.8,
+          "graduation_date": "2024-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Python",
+          "Java",
+          "React",
+          "Node.js",
+          "AWS",
+          "Docker",
+          "Machine Learning",
+          "Data Structures",
+          "Algorithms"
+        ],
+        "experience": [
+          {
+            "position": "Software Engineering Intern",
+            "company": "Google",
+            "location": "Mountain View, CA",
+            "start_date": "2023-06-01",
+            "end_date": "2023-09-01",
+            "description": "Developed and deployed microservices using Python and Docker. Implemented CI/CD pipelines and improved test coverage by 40%."
+          }
+        ],
+        "projects": [
+          {
+            "title": "AI-Powered Study Assistant",
+            "description": "Built a machine learning application that helps students optimize their study schedules and predict exam performance.",
+            "technologies": ["Python", "TensorFlow", "React", "MongoDB"],
+            "github": "https://github.com/johnsmith/study-assistant"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "AWS Certified Developer",
+            "issuer": "Amazon Web Services",
+            "date": "2023-12-15"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Stanford, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "Seattle", "New York"]
+        }
+      },
+      {
+        "id": 2,
+        "first_name": "Sarah",
+        "last_name": "Johnson",
+        "email": "sarah.johnson@university.edu",
+        "phone": "(555) 234-5678",
+        "linkedin": "https://linkedin.com/in/sarahjohnson",
+        "github": "https://github.com/sarahjohnson",
+        "education": {
+          "university": "MIT",
+          "major": "Electrical Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.9,
+          "graduation_date": "2024-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Circuit Design",
+          "FPGA Programming",
+          "VHDL",
+          "Python",
+          "MATLAB",
+          "PCB Design",
+          "Embedded Systems",
+          "Signal Processing"
+        ],
+        "experience": [
+          {
+            "position": "Hardware Engineering Intern",
+            "company": "NVIDIA",
+            "location": "Santa Clara, CA",
+            "start_date": "2023-05-15",
+            "end_date": "2023-08-15",
+            "description": "Worked on GPU architecture design and optimization. Developed test benches for new hardware components."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Smart Home System",
+            "description": "Designed and implemented a low-power IoT system for home automation using custom PCB and embedded Linux.",
+            "technologies": ["VHDL", "Python", "Linux", "PCB Design"],
+            "github": "https://github.com/sarahjohnson/smart-home"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Certified LabVIEW Developer",
+            "issuer": "National Instruments",
+            "date": "2023-10-20"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Japanese",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Cambridge, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "Boston", "Austin"]
+        }
+      },
+      {
+        "id": 3,
+        "first_name": "Michael",
+        "last_name": "Chen",
+        "email": "michael.chen@university.edu",
+        "phone": "(555) 345-6789",
+        "linkedin": "https://linkedin.com/in/michaelchen",
+        "github": "https://github.com/michaelchen",
+        "education": {
+          "university": "UC Berkeley",
+          "major": "Data Science",
+          "minor": "Business Administration",
+          "gpa": 3.7,
+          "graduation_date": "2024-05-10",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Python",
+          "R",
+          "SQL",
+          "Tableau",
+          "Machine Learning",
+          "Statistical Analysis",
+          "Data Visualization",
+          "Big Data",
+          "Business Analytics"
+        ],
+        "experience": [
+          {
+            "position": "Data Science Intern",
+            "company": "Netflix",
+            "location": "Los Gatos, CA",
+            "start_date": "2023-06-01",
+            "end_date": "2023-09-01",
+            "description": "Developed recommendation algorithms and analyzed user behavior patterns. Improved content recommendation accuracy by 25%."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Stock Market Predictor",
+            "description": "Created a machine learning model to predict stock market trends using historical data and sentiment analysis.",
+            "technologies": ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+            "github": "https://github.com/michaelchen/stock-predictor"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Google Data Analytics Professional Certificate",
+            "issuer": "Google",
+            "date": "2023-11-30"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Mandarin",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Berkeley, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "New York", "Seattle"]
+        }
+      },
+      {
+        "id": 4,
+        "first_name": "Emily",
+        "last_name": "Davis",
+        "email": "emily.davis@university.edu",
+        "phone": "(555) 456-7890",
+        "linkedin": "https://linkedin.com/in/emilydavis",
+        "github": "https://github.com/emilydavis",
+        "education": {
+          "university": "Carnegie Mellon University",
+          "major": "Robotics Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.85,
+          "graduation_date": "2024-05-25",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "ROS",
+          "C++",
+          "Python",
+          "Computer Vision",
+          "Machine Learning",
+          "Control Systems",
+          "Embedded Systems",
+          "3D Printing",
+          "CAD"
+        ],
+        "experience": [
+          {
+            "position": "Robotics Research Intern",
+            "company": "Boston Dynamics",
+            "location": "Boston, MA",
+            "start_date": "2023-05-01",
+            "end_date": "2023-08-01",
+            "description": "Developed control algorithms for quadruped robots. Implemented computer vision systems for object detection and navigation."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Autonomous Drone System",
+            "description": "Built a drone system capable of autonomous navigation and object tracking using computer vision and ROS.",
+            "technologies": ["ROS", "Python", "OpenCV", "Pixhawk"],
+            "github": "https://github.com/emilydavis/autonomous-drone"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "ROS Certified Developer",
+            "issuer": "Open Robotics",
+            "date": "2023-12-10"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "French",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Pittsburgh, PA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Boston", "San Francisco Bay Area", "Seattle"]
+        }
+      },
+      {
+        "id": 5,
+        "first_name": "David",
+        "last_name": "Kim",
+        "email": "david.kim@university.edu",
+        "phone": "(555) 567-8901",
+        "linkedin": "https://linkedin.com/in/davidkim",
+        "github": "https://github.com/davidkim",
+        "education": {
+          "university": "Georgia Tech",
+          "major": "Aerospace Engineering",
+          "minor": "Physics",
+          "gpa": 3.75,
+          "graduation_date": "2024-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Aerodynamics",
+          "CFD",
+          "MATLAB",
+          "Python",
+          "CAD",
+          "Propulsion Systems",
+          "Flight Dynamics",
+          "Control Systems",
+          "Finite Element Analysis"
+        ],
+        "experience": [
+          {
+            "position": "Aerospace Engineering Intern",
+            "company": "SpaceX",
+            "location": "Hawthorne, CA",
+            "start_date": "2023-06-15",
+            "end_date": "2023-09-15",
+            "description": "Worked on rocket propulsion systems and aerodynamic analysis. Developed simulation models for rocket performance optimization."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Autonomous UAV Design",
+            "description": "Designed and built an autonomous unmanned aerial vehicle with advanced flight control systems.",
+            "technologies": ["MATLAB", "Python", "CAD", "Flight Controllers"],
+            "github": "https://github.com/davidkim/autonomous-uav"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Private Pilot License",
+            "issuer": "FAA",
+            "date": "2023-08-20"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Korean",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Atlanta, GA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Los Angeles", "Houston", "Seattle"]
+        }
+      },
+      {
+        "id": 6,
         "first_name": "Cristie",
         "last_name": "Talks",
         "email": "ctalks0@addtoany.com",
@@ -67,7 +411,7 @@
         }
       },
       {
-        "id": 2,
+        "id": 7,
         "first_name": "Larisa",
         "last_name": "Thieme",
         "email": "lthieme1@mashable.com",
@@ -109,15 +453,7 @@
           }
         ],
         "projects": [
-          {
-            "name": "Autonomous Drone",
-            "description": "Built a self-navigating drone using ROS and computer vision",
-            "technologies": ["ROS", "Python", "OpenCV", "Arduino"],
-            "name": "Solar-Powered Water Purifier",
-            "description": "Designed and built a sustainable water purification system",
-            "technologies": ["CAD", "Solar Technology", "Fluid Dynamics"],
-            "github_link": "https://github.com/lthieme/water-purifier"
-          }
+          
         ],
         "certifications": [
           {
@@ -145,7 +481,7 @@
         }
       },
       {
-        "id": 3,
+        "id": 8,
         "first_name": "Trenna",
         "last_name": "Archbold",
         "email": "tarchbold2@flavors.me",
@@ -211,7 +547,7 @@
         }
       },
       {
-        "id": 4,
+        "id": 9,
         "first_name": "Emili",
         "last_name": "Bulteel",
         "email": "ebulteel3@cnet.com",
@@ -277,7 +613,7 @@
         }
       },
       {
-        "id": 5,
+        "id": 10,
         "first_name": "Karlee",
         "last_name": "Chapiro",
         "email": "kchapiro4@wikispaces.com",
@@ -343,7 +679,7 @@
         }
       },
       {
-        "id": 6,
+        "id": 11,
         "first_name": "Drew",
         "last_name": "Margerison",
         "email": "dmargerison@gatech.edu",
@@ -410,7 +746,7 @@
         }
       },
       {
-        "id": 7,
+        "id": 12,
         "first_name": "Jemie",
         "last_name": "Annes",
         "email": "jannes@umich.edu",
@@ -477,7 +813,7 @@
         }
       },
       {
-        "id": 8,
+        "id": 13,
         "first_name": "Helen",
         "last_name": "Sutlieff",
         "email": "hsutlieff@harvard.edu",
@@ -544,10 +880,10 @@
         }
       },
       {
-        "id": 9,
+        "id": 14,
         "first_name": "Ellissa",
         "last_name": "Kenwright",
-        "email": "ekenwright@cornell.edu",
+        
         "phone": "+1-555-901-2345",
         "linkedin": "https://linkedin.com/in/ellissa-kenwright",
         "github": "https://github.com/ekenwright",
@@ -593,7 +929,7 @@
         "Graduation Date": "1/6/2028"
       },
       {
-        "id": 10,
+        "id": 15,
         "first_name": "Joete",
         "last_name": "Sawfoot",
         "email": "jsawfoot9@sbwire.com",
@@ -604,7 +940,7 @@
         "Graduation Date": "10/27/2025"
       },
       {
-        "id": 11,
+        "id": 16,
         "first_name": "Marcus",
         "last_name": "Chen",
         "email": "mchen@mit.edu",
@@ -672,7 +1008,7 @@
         }
       },
       {
-        "id": 12,
+        "id": 17,
         "first_name": "Sophia",
         "last_name": "Rodriguez",
         "email": "srodriguez@gatech.edu",
@@ -740,7 +1076,7 @@
         }
       },
       {
-        "id": 13,
+        "id": 18,
         "first_name": "Aisha",
         "last_name": "Patel",
         "email": "apatel@berkeley.edu",
@@ -809,6 +1145,832 @@
           "current": "Berkeley, CA",
           "willing_to_relocate": true,
           "preferred_locations": ["San Francisco", "Seattle", "New York"]
+        }
+      },
+      {
+        "id": 19,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@university.edu",
+        "phone": "(555) 123-4567",
+        "linkedin": "https://linkedin.com/in/johndoe",
+        "github": "https://github.com/johndoe",
+        "education": {
+          "university": "Stanford University",
+          "major": "Computer Science",
+          "minor": "Mathematics",
+          "gpa": 3.8,
+          "graduation_date": "2024-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Python",
+          "Java",
+          "React",
+          "Node.js",
+          "AWS",
+          "Docker",
+          "Machine Learning",
+          "Data Structures",
+          "Algorithms"
+        ],
+        "experience": [
+          {
+            "position": "Software Engineering Intern",
+            "company": "Google",
+            "location": "Mountain View, CA",
+            "start_date": "2023-06-01",
+            "end_date": "2023-09-01",
+            "description": "Developed and deployed microservices using Python and Docker. Implemented CI/CD pipelines and improved test coverage by 40%."
+          }
+        ],
+        "projects": [
+          {
+            "title": "AI-Powered Study Assistant",
+            "description": "Built a machine learning application that helps students optimize their study schedules and predict exam performance.",
+            "technologies": ["Python", "TensorFlow", "React", "MongoDB"],
+            "github": "https://github.com/johndoe/study-assistant"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "AWS Certified Developer",
+            "issuer": "Amazon Web Services",
+            "date": "2023-12-15"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Stanford, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "Seattle", "New York"]
+        }
+      },
+      {
+        "id": 20,
+        "first_name": "Sarah",
+        "last_name": "Johnson",
+        "email": "sarah.johnson@university.edu",
+        "phone": "(555) 234-5678",
+        "linkedin": "https://linkedin.com/in/sarahjohnson",
+        "github": "https://github.com/sarahjohnson",
+        "education": {
+          "university": "MIT",
+          "major": "Electrical Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.9,
+          "graduation_date": "2024-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Circuit Design",
+          "FPGA Programming",
+          "VHDL",
+          "Python",
+          "MATLAB",
+          "PCB Design",
+          "Embedded Systems",
+          "Signal Processing"
+        ],
+        "experience": [
+          {
+            "position": "Hardware Engineering Intern",
+            "company": "NVIDIA",
+            "location": "Santa Clara, CA",
+            "start_date": "2023-05-15",
+            "end_date": "2023-08-15",
+            "description": "Worked on GPU architecture design and optimization. Developed test benches for new hardware components."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Smart Home System",
+            "description": "Designed and implemented a low-power IoT system for home automation using custom PCB and embedded Linux.",
+            "technologies": ["VHDL", "Python", "Linux", "PCB Design"],
+            "github": "https://github.com/sarahjohnson/smart-home"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Certified LabVIEW Developer",
+            "issuer": "National Instruments",
+            "date": "2023-10-20"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Japanese",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Cambridge, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "Boston", "Austin"]
+        }
+      },
+      {
+        "id": 21,
+        "first_name": "Michael",
+        "last_name": "Chen",
+        "email": "michael.chen@university.edu",
+        "phone": "(555) 345-6789",
+        "linkedin": "https://linkedin.com/in/michaelchen",
+        "github": "https://github.com/michaelchen",
+        "education": {
+          "university": "UC Berkeley",
+          "major": "Data Science",
+          "minor": "Business Administration",
+          "gpa": 3.7,
+          "graduation_date": "2024-05-10",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Python",
+          "R",
+          "SQL",
+          "Tableau",
+          "Machine Learning",
+          "Statistical Analysis",
+          "Data Visualization",
+          "Big Data",
+          "Business Analytics"
+        ],
+        "experience": [
+          {
+            "position": "Data Science Intern",
+            "company": "Netflix",
+            "location": "Los Gatos, CA",
+            "start_date": "2023-06-01",
+            "end_date": "2023-09-01",
+            "description": "Developed recommendation algorithms and analyzed user behavior patterns. Improved content recommendation accuracy by 25%."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Stock Market Predictor",
+            "description": "Created a machine learning model to predict stock market trends using historical data and sentiment analysis.",
+            "technologies": ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+            "github": "https://github.com/michaelchen/stock-predictor"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Google Data Analytics Professional Certificate",
+            "issuer": "Google",
+            "date": "2023-11-30"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Mandarin",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Berkeley, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "New York", "Seattle"]
+        }
+      },
+      {
+        "id": 22,
+        "first_name": "Emily",
+        "last_name": "Davis",
+        "email": "emily.davis@university.edu",
+        "phone": "(555) 456-7890",
+        "linkedin": "https://linkedin.com/in/emilydavis",
+        "github": "https://github.com/emilydavis",
+        "education": {
+          "university": "Carnegie Mellon University",
+          "major": "Robotics Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.85,
+          "graduation_date": "2024-05-25",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "ROS",
+          "C++",
+          "Python",
+          "Computer Vision",
+          "Machine Learning",
+          "Control Systems",
+          "Embedded Systems",
+          "3D Printing",
+          "CAD"
+        ],
+        "experience": [
+          {
+            "position": "Robotics Research Intern",
+            "company": "Boston Dynamics",
+            "location": "Boston, MA",
+            "start_date": "2023-05-01",
+            "end_date": "2023-08-01",
+            "description": "Developed control algorithms for quadruped robots. Implemented computer vision systems for object detection and navigation."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Autonomous Drone System",
+            "description": "Built a drone system capable of autonomous navigation and object tracking using computer vision and ROS.",
+            "technologies": ["ROS", "Python", "OpenCV", "Pixhawk"],
+            "github": "https://github.com/emilydavis/autonomous-drone"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "ROS Certified Developer",
+            "issuer": "Open Robotics",
+            "date": "2023-12-10"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "French",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Pittsburgh, PA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Boston", "San Francisco Bay Area", "Seattle"]
+        }
+      },
+      {
+        "id": 23,
+        "first_name": "David",
+        "last_name": "Kim",
+        "email": "david.kim@university.edu",
+        "phone": "(555) 567-8901",
+        "linkedin": "https://linkedin.com/in/davidkim",
+        "github": "https://github.com/davidkim",
+        "education": {
+          "university": "Georgia Tech",
+          "major": "Aerospace Engineering",
+          "minor": "Physics",
+          "gpa": 3.75,
+          "graduation_date": "2024-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Aerodynamics",
+          "CFD",
+          "MATLAB",
+          "Python",
+          "CAD",
+          "Propulsion Systems",
+          "Flight Dynamics",
+          "Control Systems",
+          "Finite Element Analysis"
+        ],
+        "experience": [
+          {
+            "position": "Aerospace Engineering Intern",
+            "company": "SpaceX",
+            "location": "Hawthorne, CA",
+            "start_date": "2023-06-15",
+            "end_date": "2023-09-15",
+            "description": "Worked on rocket propulsion systems and aerodynamic analysis. Developed simulation models for rocket performance optimization."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Autonomous UAV Design",
+            "description": "Designed and built an autonomous unmanned aerial vehicle with advanced flight control systems.",
+            "technologies": ["MATLAB", "Python", "CAD", "Flight Controllers"],
+            "github": "https://github.com/davidkim/autonomous-uav"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Private Pilot License",
+            "issuer": "FAA",
+            "date": "2023-08-20"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Korean",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Atlanta, GA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Los Angeles", "Houston", "Seattle"]
+        }
+      },
+      {
+        "id": 24,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@university.edu",
+        "phone": "(555) 123-4567",
+        "linkedin": "https://linkedin.com/in/johndoe",
+        "github": "https://github.com/johndoe",
+        "education": {
+          "university": "Stanford University",
+          "major": "Computer Science",
+          "minor": "Mathematics",
+          "gpa": 3.8,
+          "graduation_date": "2024-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Python",
+          "Java",
+          "React",
+          "Node.js",
+          "AWS",
+          "Docker",
+          "Machine Learning",
+          "Data Structures",
+          "Algorithms"
+        ],
+        "experience": [
+          {
+            "position": "Software Engineering Intern",
+            "company": "Google",
+            "location": "Mountain View, CA",
+            "start_date": "2023-06-01",
+            "end_date": "2023-09-01",
+            "description": "Developed and deployed microservices using Python and Docker. Implemented CI/CD pipelines and improved test coverage by 40%."
+          }
+        ],
+        "projects": [
+          {
+            "title": "AI-Powered Study Assistant",
+            "description": "Built a machine learning application that helps students optimize their study schedules and predict exam performance.",
+            "technologies": ["Python", "TensorFlow", "React", "MongoDB"],
+            "github": "https://github.com/johndoe/study-assistant"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "AWS Certified Developer",
+            "issuer": "Amazon Web Services",
+            "date": "2023-12-15"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Stanford, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "Seattle", "New York"]
+        }
+      },
+      {
+        "id": 25,
+        "first_name": "Sarah",
+        "last_name": "Johnson",
+        "email": "sarah.johnson@university.edu",
+        "phone": "(555) 234-5678",
+        "linkedin": "https://linkedin.com/in/sarahjohnson",
+        "github": "https://github.com/sarahjohnson",
+        "education": {
+          "university": "MIT",
+          "major": "Electrical Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.9,
+          "graduation_date": "2024-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Circuit Design",
+          "FPGA Programming",
+          "VHDL",
+          "Python",
+          "MATLAB",
+          "PCB Design",
+          "Embedded Systems",
+          "Signal Processing"
+        ],
+        "experience": [
+          {
+            "position": "Hardware Engineering Intern",
+            "company": "NVIDIA",
+            "location": "Santa Clara, CA",
+            "start_date": "2023-05-15",
+            "end_date": "2023-08-15",
+            "description": "Worked on GPU architecture design and optimization. Developed test benches for new hardware components."
+          }
+        ],
+        "projects": [
+          {
+            "title": "Smart Home System",
+            "description": "Designed and implemented a low-power IoT system for home automation using custom PCB and embedded Linux.",
+            "technologies": ["VHDL", "Python", "Linux", "PCB Design"],
+            "github": "https://github.com/sarahjohnson/smart-home"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Certified LabVIEW Developer",
+            "issuer": "National Instruments",
+            "date": "2023-10-20"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Japanese",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Cambridge, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco Bay Area", "Boston", "Austin"]
+        }
+      },
+      {
+        "id": 26,
+        "first_name": "Rachel",
+        "last_name": "Zhang",
+        "email": "rzhang@stanford.edu",
+        "phone": "+1-555-678-9012",
+        "linkedin": "https://linkedin.com/in/rachel-zhang",
+        "github": "https://github.com/rzhang-dev",
+        "education": {
+          "university": "Stanford University",
+          "major": "Computer Science",
+          "minor": "Artificial Intelligence",
+          "gpa": 3.92,
+          "graduation_date": "2025-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Machine Learning",
+          "Deep Learning",
+          "Python",
+          "PyTorch",
+          "Computer Vision",
+          "Natural Language Processing",
+          "AWS",
+          "Docker"
+        ],
+        "experience": [
+          {
+            "title": "AI Research Intern",
+            "company": "OpenAI",
+            "location": "San Francisco, CA",
+            "start_date": "2023-06",
+            "end_date": "2023-09",
+            "description": "Developed and optimized transformer models for natural language processing tasks"
+          }
+        ],
+        "projects": [
+          {
+            "name": "AI Image Generator",
+            "description": "Built a GAN-based system for generating realistic images from text descriptions",
+            "technologies": ["PyTorch", "TensorFlow", "AWS", "Docker"],
+            "github_link": "https://github.com/rzhang-dev/ai-image-gen"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Deep Learning Specialization",
+            "issuer": "Coursera",
+            "date_earned": "2023-04",
+            "expiry_date": "N/A"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Mandarin",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Stanford, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco", "Seattle", "New York"]
+        }
+      },
+      {
+        "id": 27,
+        "first_name": "Lucas",
+        "last_name": "Silva",
+        "email": "lsilva@mit.edu",
+        "phone": "+1-555-789-0123",
+        "linkedin": "https://linkedin.com/in/lucas-silva",
+        "github": "https://github.com/lsilva-tech",
+        "education": {
+          "university": "MIT",
+          "major": "Mechanical Engineering",
+          "minor": "Robotics",
+          "gpa": 3.88,
+          "graduation_date": "2025-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "CAD/CAM",
+          "3D Printing",
+          "Robotics",
+          "Python",
+          "MATLAB",
+          "Control Systems",
+          "Machine Learning",
+          "IoT"
+        ],
+        "experience": [
+          {
+            "title": "Robotics Research Assistant",
+            "company": "MIT Robotics Lab",
+            "location": "Cambridge, MA",
+            "start_date": "2023-09",
+            "end_date": "Present",
+            "description": "Developing soft robotics systems for medical applications"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Soft Robotic Hand",
+            "description": "Designed and built a prosthetic hand using soft robotics principles",
+            "technologies": ["CAD", "3D Printing", "Python", "Arduino"],
+            "github_link": "https://github.com/lsilva-tech/soft-hand"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "SolidWorks Certified Professional",
+            "issuer": "Dassault Systèmes",
+            "date_earned": "2023-06",
+            "expiry_date": "2026-06"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Portuguese",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Cambridge, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Boston", "San Francisco", "Seattle"]
+        }
+      },
+      {
+        "id": 28,
+        "first_name": "Priya",
+        "last_name": "Patel",
+        "email": "ppatel@berkeley.edu",
+        "phone": "+1-555-890-1234",
+        "linkedin": "https://linkedin.com/in/priya-patel",
+        "github": "https://github.com/ppatel-data",
+        "education": {
+          "university": "UC Berkeley",
+          "major": "Data Science",
+          "minor": "Statistics",
+          "gpa": 3.95,
+          "graduation_date": "2025-05-10",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Machine Learning",
+          "Statistical Analysis",
+          "Python",
+          "R",
+          "SQL",
+          "Tableau",
+          "Big Data",
+          "Data Visualization"
+        ],
+        "experience": [
+          {
+            "title": "Data Science Intern",
+            "company": "Netflix",
+            "location": "Los Gatos, CA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Developed recommendation algorithms and analyzed user behavior patterns"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Streaming Analytics Platform",
+            "description": "Built a real-time analytics platform for streaming data using Apache Spark",
+            "technologies": ["Python", "Spark", "AWS", "Docker"],
+            "github_link": "https://github.com/ppatel-data/stream-analytics"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Google Data Analytics Professional Certificate",
+            "issuer": "Google",
+            "date_earned": "2023-03",
+            "expiry_date": "N/A"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Hindi",
+            "proficiency": "Professional"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Berkeley, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco", "Seattle", "New York"]
+        }
+      },
+      {
+        "id": 29,
+        "first_name": "Alex",
+        "last_name": "Thompson",
+        "email": "athompson@cmu.edu",
+        "phone": "+1-555-901-2345",
+        "linkedin": "https://linkedin.com/in/alex-thompson",
+        "github": "https://github.com/athompson-dev",
+        "education": {
+          "university": "Carnegie Mellon University",
+          "major": "Software Engineering",
+          "minor": "Human-Computer Interaction",
+          "gpa": 3.85,
+          "graduation_date": "2025-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Full Stack Development",
+          "React",
+          "Node.js",
+          "Python",
+          "AWS",
+          "Docker",
+          "CI/CD",
+          "UI/UX Design"
+        ],
+        "experience": [
+          {
+            "title": "Software Engineering Intern",
+            "company": "Microsoft",
+            "location": "Redmond, WA",
+            "start_date": "2023-06",
+            "end_date": "2023-09",
+            "description": "Developed features for Azure DevOps platform and improved CI/CD pipelines"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Collaborative Code Editor",
+            "description": "Built a real-time collaborative code editor with features like syntax highlighting and version control",
+            "technologies": ["React", "Node.js", "WebSocket", "MongoDB"],
+            "github_link": "https://github.com/athompson-dev/code-collab"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "AWS Certified Developer",
+            "issuer": "Amazon Web Services",
+            "date_earned": "2023-07",
+            "expiry_date": "2026-07"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "French",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Pittsburgh, PA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Seattle", "San Francisco", "New York"]
+        }
+      },
+      {
+        "id": 30,
+        "first_name": "Sofia",
+        "last_name": "Garcia",
+        "email": "sgarcia@gatech.edu",
+        "phone": "+1-555-012-3456",
+        "linkedin": "https://linkedin.com/in/sofia-garcia",
+        "github": "https://github.com/sgarcia-tech",
+        "education": {
+          "university": "Georgia Institute of Technology",
+          "major": "Aerospace Engineering",
+          "minor": "Computing",
+          "gpa": 3.90,
+          "graduation_date": "2025-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Aerodynamics",
+          "CFD",
+          "MATLAB",
+          "Python",
+          "CAD",
+          "Propulsion Systems",
+          "Flight Dynamics",
+          "Control Systems"
+        ],
+        "experience": [
+          {
+            "title": "Aerospace Engineering Intern",
+            "company": "Boeing",
+            "location": "Seattle, WA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Worked on aircraft design optimization and aerodynamic analysis"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Electric Aircraft Design",
+            "description": "Designed and analyzed an electric-powered aircraft concept for urban mobility",
+            "technologies": ["ANSYS", "MATLAB", "Python", "CAD"],
+            "github_link": "https://github.com/sgarcia-tech/electric-aircraft"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Private Pilot License",
+            "issuer": "FAA",
+            "date_earned": "2023-08",
+            "expiry_date": "N/A"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Atlanta, GA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Seattle", "Los Angeles", "Houston"]
         }
       }
     ]
