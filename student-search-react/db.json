@@ -5,93 +5,586 @@
         "first_name": "Cristie",
         "last_name": "Talks",
         "email": "ctalks0@addtoany.com",
-        "gender": "Female",
-        "University": "Instituto Tecnológico de Querétaro",
-        "GPA": 3.17,
-        "Major": "Computer Science",
-        "Graduation Date": "7/30/2028"
+        "phone": "+1-555-123-4567",
+        "linkedin": "https://linkedin.com/in/cristie-talks",
+        "github": "https://github.com/ctalks",
+        "education": {
+          "university": "Instituto Tecnológico de Querétaro",
+          "major": "Computer Science",
+          "minor": "Mathematics",
+          "gpa": 3.17,
+          "graduation_date": "2028-07-30",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "JavaScript",
+          "React",
+          "Python",
+          "Data Structures",
+          "Algorithms"
+        ],
+        "experience": [
+          {
+            "title": "Software Engineering Intern",
+            "company": "Tech Corp",
+            "location": "Remote",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Developed full-stack web applications using React and Node.js"
+          }
+        ],
+        "projects": [
+          {
+            "name": "E-commerce Platform",
+            "description": "Built a full-stack e-commerce platform using MERN stack",
+            "technologies": ["MongoDB", "Express", "React", "Node.js"],
+            "github_link": "https://github.com/ctalks/ecommerce"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "AWS Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date_earned": "2023-06",
+            "expiry_date": "2026-06"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Professional"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "San Francisco, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco", "Seattle", "New York"]
+        }
       },
       {
         "id": 2,
         "first_name": "Larisa",
         "last_name": "Thieme",
         "email": "lthieme1@mashable.com",
-        "gender": "Female",
-        "University": "Obninsk State Technical University for Nuclear Power Engineering",
-        "GPA": 2.44,
-        "Major": "Mechanical Engineering",
-        "Graduation Date": "11/16/2029"
+        "phone": "+1-555-234-5678",
+        "linkedin": "https://linkedin.com/in/larisa-thieme",
+        "github": "https://github.com/lthieme",
+        "education": {
+          "university": "MIT",
+          "major": "Mechanical Engineering",
+          "minor": "Robotics",
+          "gpa": 3.85,
+          "graduation_date": "2025-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "CAD/CAM",
+          "MATLAB",
+          "Python",
+          "Robotics",
+          "3D Printing",
+          "Machine Learning"
+        ],
+        "experience": [
+          {
+            "title": "Robotics Research Assistant",
+            "company": "MIT Robotics Lab",
+            "location": "Cambridge, MA",
+            "start_date": "2023-09",
+            "end_date": "Present",
+            "description": "Developing autonomous navigation systems for robotic applications"
+          },
+          {
+            "title": "Mechanical Design Intern",
+            "company": "Boston Dynamics",
+            "location": "Waltham, MA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Designed and tested robotic components using advanced simulation tools"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Autonomous Drone",
+            "description": "Built a self-navigating drone using ROS and computer vision",
+            "technologies": ["ROS", "Python", "OpenCV", "Arduino"],
+            "name": "Solar-Powered Water Purifier",
+            "description": "Designed and built a sustainable water purification system",
+            "technologies": ["CAD", "Solar Technology", "Fluid Dynamics"],
+            "github_link": "https://github.com/lthieme/water-purifier"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Certified SolidWorks Associate",
+            "issuer": "Dassault Systèmes",
+            "date_earned": "2023-05",
+            "expiry_date": "2025-05"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Professional"
+          },
+          {
+            "name": "Russian",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "F1 Visa",
+        "location": {
+          "current": "Boston, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Boston", "New York", "Chicago"]
+        }
       },
       {
         "id": 3,
         "first_name": "Trenna",
         "last_name": "Archbold",
         "email": "tarchbold2@flavors.me",
-        "gender": "Female",
-        "University": "Drury College",
-        "GPA": 3.5,
-        "Major": "Business Administration",
-        "Graduation Date": "12/3/2025"
+        "phone": "+1-555-345-6789",
+        "linkedin": "https://linkedin.com/in/trenna-archbold",
+        "github": "https://github.com/tarchbold",
+        "education": {
+          "university": "Drury College",
+          "major": "Business Administration",
+          "minor": "Economics",
+          "gpa": 3.5,
+          "graduation_date": "2025-12-03",
+          "expected_degree": "Bachelor of Business Administration"
+        },
+        "skills": [
+          "Financial Analysis",
+          "Project Management",
+          "Market Research",
+          "Data Analytics",
+          "Tableau"
+        ],
+        "experience": [
+          {
+            "title": "Business Analyst Intern",
+            "company": "Global Consulting Group",
+            "location": "Chicago, IL",
+            "start_date": "2023-01",
+            "end_date": "2023-08",
+            "description": "Conducted market research and prepared financial reports"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Startup Market Analysis",
+            "description": "Analyzed market opportunities for tech startups in emerging markets",
+            "technologies": ["Excel", "PowerBI", "SQL"],
+            "github_link": "https://github.com/tarchbold/market-analysis"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Project Management Professional (PMP)",
+            "issuer": "Project Management Institute",
+            "date_earned": "2023-03",
+            "expiry_date": "2026-03"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "French",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Chicago, IL",
+          "willing_to_relocate": false,
+          "preferred_locations": ["Chicago"]
+        }
       },
       {
         "id": 4,
         "first_name": "Emili",
         "last_name": "Bulteel",
         "email": "ebulteel3@cnet.com",
-        "gender": "Female",
-        "University": "Universidad Peruana Cayetano Heredia",
-        "GPA": 3.06,
-        "Major": "Psychology",
-        "Graduation Date": "9/26/2026"
+        "phone": "+1-555-456-7890",
+        "linkedin": "https://linkedin.com/in/emili-bulteel",
+        "github": "https://github.com/ebulteel",
+        "education": {
+          "university": "Universidad Peruana Cayetano Heredia",
+          "major": "Psychology",
+          "minor": "Neuroscience",
+          "gpa": 3.06,
+          "graduation_date": "2026-09-26",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Research Methods",
+          "Statistical Analysis",
+          "SPSS",
+          "Experimental Design",
+          "Clinical Assessment"
+        ],
+        "experience": [
+          {
+            "title": "Research Assistant",
+            "company": "Mental Health Institute",
+            "location": "Lima, Peru",
+            "start_date": "2023-03",
+            "end_date": "2023-12",
+            "description": "Conducted psychological research and data analysis"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Cognitive Behavior Study",
+            "description": "Researched the impact of social media on mental health",
+            "technologies": ["R", "SPSS", "Survey Design"],
+            "github_link": "https://github.com/ebulteel/cognitive-study"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Mental Health First Aid",
+            "issuer": "National Council for Mental Wellbeing",
+            "date_earned": "2023-01",
+            "expiry_date": "2025-01"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Professional"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "OPT Eligible",
+        "location": {
+          "current": "Miami, FL",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Miami", "Los Angeles", "New York"]
+        }
       },
       {
         "id": 5,
         "first_name": "Karlee",
         "last_name": "Chapiro",
         "email": "kchapiro4@wikispaces.com",
-        "gender": "Female",
-        "University": "Universidad ORT Uruguay",
-        "GPA": 3.0,
-        "Major": "Biology",
-        "Graduation Date": "10/16/2026"
+        "phone": "+1-555-567-8901",
+        "linkedin": "https://linkedin.com/in/karlee-chapiro",
+        "github": "https://github.com/kchapiro",
+        "education": {
+          "university": "Universidad ORT Uruguay",
+          "major": "Biology",
+          "minor": "Chemistry",
+          "gpa": 3.0,
+          "graduation_date": "2026-10-16",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "PCR",
+          "Cell Culture",
+          "Microscopy",
+          "Lab Techniques",
+          "Data Analysis"
+        ],
+        "experience": [
+          {
+            "title": "Laboratory Assistant",
+            "company": "BioResearch Labs",
+            "location": "Montevideo, Uruguay",
+            "start_date": "2023-05",
+            "end_date": "2023-12",
+            "description": "Conducted experiments and maintained laboratory equipment"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Genetic Analysis Study",
+            "description": "Studied genetic markers in plant species",
+            "technologies": ["PCR", "Gel Electrophoresis", "DNA Sequencing"],
+            "github_link": "https://github.com/kchapiro/genetic-analysis"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Laboratory Safety Certification",
+            "issuer": "American Biological Safety Association",
+            "date_earned": "2023-04",
+            "expiry_date": "2025-04"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Professional"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "J1 Visa",
+        "location": {
+          "current": "San Diego, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Diego", "Boston", "Seattle"]
+        }
       },
       {
         "id": 6,
         "first_name": "Drew",
         "last_name": "Margerison",
-        "email": "dmargerison5@loc.gov",
-        "gender": "Genderqueer",
-        "University": "Universidad Interamericana de Puerto Rico, San Germán",
-        "GPA": 2.92,
-        "Major": "Electrical Engineering",
-        "Graduation Date": "3/6/2027"
+        "email": "dmargerison@gatech.edu",
+        "phone": "+1-555-678-9012",
+        "linkedin": "https://linkedin.com/in/drew-margerison",
+        "github": "https://github.com/dmargerison",
+        "education": {
+          "university": "Georgia Institute of Technology",
+          "major": "Electrical Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.82,
+          "graduation_date": "2025-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Circuit Design",
+          "FPGA Programming",
+          "Verilog",
+          "Python",
+          "Embedded Systems",
+          "PCB Design"
+        ],
+        "experience": [
+          {
+            "title": "Hardware Engineering Intern",
+            "company": "NVIDIA",
+            "location": "Santa Clara, CA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Designed and tested high-speed digital circuits for GPU applications"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Smart Home System",
+            "description": "Built an IoT-based home automation system using custom PCBs",
+            "technologies": ["Arduino", "ESP32", "MQTT", "PCB Design"],
+            "github_link": "https://github.com/dmargerison/smart-home"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Certified LabVIEW Developer",
+            "issuer": "National Instruments",
+            "date_earned": "2023-02",
+            "expiry_date": "2026-02"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Japanese",
+            "proficiency": "Intermediate"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Atlanta, GA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco", "Austin", "Seattle"]
+        }
       },
       {
         "id": 7,
         "first_name": "Jemie",
         "last_name": "Annes",
-        "email": "jannes6@1688.com",
-        "gender": "Female",
-        "University": "Pontificia Università Lateranense",
-        "GPA": 3.75,
-        "Major": "Mathematics",
-        "Graduation Date": "6/13/2028"
+        "email": "jannes@umich.edu",
+        "phone": "+1-555-789-0123",
+        "linkedin": "https://linkedin.com/in/jemie-annes",
+        "github": "https://github.com/jannes",
+        "education": {
+          "university": "University of Michigan",
+          "major": "Aerospace Engineering",
+          "minor": "Mathematics",
+          "gpa": 3.75,
+          "graduation_date": "2025-04-30",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "MATLAB",
+          "CFD",
+          "CAD",
+          "Python",
+          "Aerodynamics",
+          "Systems Engineering"
+        ],
+        "experience": [
+          {
+            "title": "Aerospace Engineering Intern",
+            "company": "SpaceX",
+            "location": "Hawthorne, CA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Worked on propulsion systems design and analysis"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Autonomous UAV",
+            "description": "Designed and built an autonomous drone for agricultural monitoring",
+            "technologies": ["SolidWorks", "Python", "ROS", "Control Systems"],
+            "github_link": "https://github.com/jannes/autonomous-uav"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "ANSYS Certification",
+            "issuer": "ANSYS",
+            "date_earned": "2023-03",
+            "expiry_date": "2026-03"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Chinese",
+            "proficiency": "Professional"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Ann Arbor, MI",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Los Angeles", "Seattle", "Houston"]
+        }
       },
       {
         "id": 8,
         "first_name": "Helen",
         "last_name": "Sutlieff",
-        "email": "hsutlieff7@barnesandnoble.com",
-        "gender": "Female",
-        "University": "Universidad Tecnológica del Choco \"Diego Luis Cordoba\"",
-        "GPA": 3.21,
-        "Major": "Chemistry",
-        "Graduation Date": "3/6/2027"
+        "email": "hsutlieff@harvard.edu",
+        "phone": "+1-555-890-1234",
+        "linkedin": "https://linkedin.com/in/helen-sutlieff",
+        "github": "https://github.com/hsutlieff",
+        "education": {
+          "university": "Harvard University",
+          "major": "Biomedical Engineering",
+          "minor": "Computer Science",
+          "gpa": 3.91,
+          "graduation_date": "2025-05-25",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Bioinformatics",
+          "Python",
+          "R",
+          "Machine Learning",
+          "Gene Sequencing",
+          "Medical Imaging"
+        ],
+        "experience": [
+          {
+            "title": "Research Assistant",
+            "company": "Harvard Medical School",
+            "location": "Boston, MA",
+            "start_date": "2023-06",
+            "end_date": "Present",
+            "description": "Developing ML models for cancer detection from medical images"
+          }
+        ],
+        "projects": [
+          {
+            "name": "AI-Powered Disease Diagnosis",
+            "description": "Created a deep learning system for early disease detection",
+            "technologies": ["Python", "TensorFlow", "Medical Imaging", "AWS"],
+            "github_link": "https://github.com/hsutlieff/medical-ai"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Deep Learning Specialization",
+            "issuer": "Coursera",
+            "date_earned": "2023-05",
+            "expiry_date": "N/A"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "French",
+            "proficiency": "Professional"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Cambridge, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Boston", "San Francisco", "New York"]
+        }
       },
       {
         "id": 9,
         "first_name": "Ellissa",
         "last_name": "Kenwright",
+        "email": "ekenwright@cornell.edu",
+        "phone": "+1-555-901-2345",
+        "linkedin": "https://linkedin.com/in/ellissa-kenwright",
+        "github": "https://github.com/ekenwright",
+        "education": {
+          "university": "Cornell University",
+          "major": "Chemical Engineering",
+          "minor": "Environmental Science",
+          "gpa": 3.87,
+          "graduation_date": "2025-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Process Design",
+          "MATLAB",
+          "Aspen Plus",
+          "Python",
+          "Sustainable Engineering",
+          "Green Chemistry"
+        ],
+        "experience": [
+          {
+            "title": "Process Engineering Intern",
+            "company": "Tesla",
+            "location": "Fremont, CA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Optimized battery manufacturing processes for sustainability"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Sustainable Battery Recycling",
+            "description": "Developed an eco-friendly process for lithium battery recycling",
+            "technologies": ["Chemical Processing", "Green Technology", "Process Simulation"],
+            "github_link": "https://github.com/ekenwright/battery-recycling"
+          }
+        ],
         "email": "ekenwright8@yolasite.com",
         "gender": "Female",
         "University": "Ecole Mohammadia d'Ingénieurs",
@@ -112,993 +605,211 @@
       },
       {
         "id": 11,
-        "first_name": "Solomon",
-        "last_name": "Bottinelli",
-        "email": "sbottinellia@tumblr.com",
-        "gender": "Genderqueer",
-        "University": "Universiti Malaysia Kelantan",
-        "GPA": 3.26,
-        "Major": "Political Science",
-        "Graduation Date": "1/14/2027"
+        "first_name": "Marcus",
+        "last_name": "Chen",
+        "email": "mchen@mit.edu",
+        "phone": "+1-555-123-4567",
+        "linkedin": "https://linkedin.com/in/marcus-chen",
+        "github": "https://github.com/mchen-mit",
+        "education": {
+          "university": "MIT",
+          "major": "Robotics Engineering",
+          "minor": "Artificial Intelligence",
+          "gpa": 3.95,
+          "graduation_date": "2025-05-15",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "ROS",
+          "Computer Vision",
+          "PyTorch",
+          "C++",
+          "SLAM",
+          "Arduino",
+          "Sensor Fusion"
+        ],
+        "experience": [
+          {
+            "title": "Robotics Research Intern",
+            "company": "Boston Dynamics",
+            "location": "Waltham, MA",
+            "start_date": "2023-06",
+            "end_date": "2023-08",
+            "description": "Developed perception algorithms for quadruped robots"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Autonomous Delivery Robot",
+            "description": "Built a self-navigating robot for campus deliveries",
+            "technologies": ["ROS", "Python", "Computer Vision", "Arduino"],
+            "github_link": "https://github.com/mchen-mit/delivery-bot"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "ROS Developer",
+            "issuer": "The Construct",
+            "date_earned": "2023-03",
+            "expiry_date": "N/A"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Mandarin",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Cambridge, MA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Boston", "San Francisco", "Seattle"]
+        }
       },
       {
         "id": 12,
-        "first_name": "Eadith",
-        "last_name": "Shortcliffe",
-        "email": "eshortcliffeb@slate.com",
-        "gender": "Female",
-        "University": "Universidad Católica de Santa Fé",
-        "GPA": 3.35,
-        "Major": "English Literature",
-        "Graduation Date": "3/18/2027"
+        "first_name": "Sophia",
+        "last_name": "Rodriguez",
+        "email": "srodriguez@gatech.edu",
+        "phone": "+1-555-234-5678",
+        "linkedin": "https://linkedin.com/in/sophia-rodriguez",
+        "github": "https://github.com/srodriguez-tech",
+        "education": {
+          "university": "Georgia Institute of Technology",
+          "major": "Aerospace Engineering",
+          "minor": "Computing",
+          "gpa": 3.88,
+          "graduation_date": "2025-05-10",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "CFD",
+          "ANSYS",
+          "Python",
+          "MATLAB",
+          "CAD",
+          "Wind Tunnel Testing",
+          "Systems Engineering"
+        ],
+        "experience": [
+          {
+            "title": "Propulsion Engineering Intern",
+            "company": "SpaceX",
+            "location": "Hawthorne, CA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Worked on Raptor engine optimization and testing"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Reusable Rocket Design",
+            "description": "Led team in designing and building a recoverable model rocket",
+            "technologies": ["ANSYS", "SolidWorks", "Arduino", "Python"],
+            "github_link": "https://github.com/srodriguez-tech/reusable-rocket"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "ANSYS Academic Certification",
+            "issuer": "ANSYS",
+            "date_earned": "2023-04",
+            "expiry_date": "2026-04"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Spanish",
+            "proficiency": "Native"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Atlanta, GA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["Los Angeles", "Houston", "Seattle"]
+        }
       },
       {
         "id": 13,
-        "first_name": "Phineas",
-        "last_name": "Letherbury",
-        "email": "pletherburyc@ftc.gov",
-        "gender": "Male",
-        "University": "Africa University",
-        "GPA": 2.52,
-        "Major": "History",
-        "Graduation Date": "4/23/2027"
-      },
-      {
-        "id": 14,
-        "first_name": "Ichabod",
-        "last_name": "Hallor",
-        "email": "ihallord@aboutads.info",
-        "gender": "Male",
-        "University": "Universidad Central del Caribe",
-        "GPA": 2.5,
-        "Major": "Sociology",
-        "Graduation Date": "7/2/2028"
-      },
-      {
-        "id": 15,
-        "first_name": "Maryl",
-        "last_name": "Whether",
-        "email": "mwhethere@usnews.com",
-        "gender": "Female",
-        "University": "Shenzhen University",
-        "GPA": 3.08,
-        "Major": "Environmental Science",
-        "Graduation Date": "8/2/2027"
-      },
-      {
-        "id": 16,
-        "first_name": "Agnese",
-        "last_name": "Lead",
-        "email": "aleadf@eepurl.com",
-        "gender": "Female",
-        "University": "Ecole Supérieure d'Ingénieurs de Marseille",
-        "GPA": 2.03,
-        "Major": "Civil Engineering",
-        "Graduation Date": "9/29/2026"
-      },
-      {
-        "id": 17,
-        "first_name": "Fernandina",
-        "last_name": "Gwilliam",
-        "email": "fgwilliamg@sitemeter.com",
-        "gender": "Female",
-        "University": "Mansfield University of Pennsylvania",
-        "GPA": 3.71,
-        "Major": "Philosophy",
-        "Graduation Date": "5/28/2026"
-      },
-      {
-        "id": 18,
-        "first_name": "Natividad",
-        "last_name": "Hogsden",
-        "email": "nhogsdenh@cargocollective.com",
-        "gender": "Female",
-        "University": "Cubidor University Switzerland",
-        "GPA": 2.02,
-        "Major": "Art History",
-        "Graduation Date": "4/23/2026"
-      },
-      {
-        "id": 19,
-        "first_name": "Burnaby",
-        "last_name": "Whitnell",
-        "email": "bwhitnelli@yale.edu",
-        "gender": "Male",
-        "University": "Universitas Kristen Maranatha",
-        "GPA": 2.31,
-        "Major": "Anthropology",
-        "Graduation Date": "2/4/2027"
-      },
-      {
-        "id": 20,
-        "first_name": "Durante",
-        "last_name": "Waycot",
-        "email": "dwaycotj@blogtalkradio.com",
-        "gender": "Male",
-        "University": "Centre de Formation et de Perfectionnement des Journalistes",
-        "GPA": 3.9,
-        "Major": "Journalism",
-        "Graduation Date": "1/22/2027"
-      },
-      {
-        "id": 21,
-        "first_name": "Jody",
-        "last_name": "Lumb",
-        "email": "jlumbk@aboutads.info",
-        "gender": "Male",
-        "University": "American InterContinental University - Atlanta",
-        "GPA": 2.53,
-        "Major": "Marketing",
-        "Graduation Date": "12/25/2029"
-      },
-      {
-        "id": 22,
-        "first_name": "Grazia",
-        "last_name": "Lanfare",
-        "email": "glanfarel@jimdo.com",
-        "gender": "Female",
-        "University": "Ecole Nationale Superieure d'Informatique et de Mathematiques Appliquees de Grenoble",
-        "GPA": 3.14,
-        "Major": "Data Science",
-        "Graduation Date": "1/24/2026"
-      },
-      {
-        "id": 23,
-        "first_name": "Ivie",
-        "last_name": "Bessent",
-        "email": "ibessentm@opensource.org",
-        "gender": "Non-binary",
-        "University": "Université Val-de-Marne (Paris XII)",
-        "GPA": 3.85,
-        "Major": "International Relations",
-        "Graduation Date": "3/29/2029"
-      },
-      {
-        "id": 24,
-        "first_name": "Rosemarie",
-        "last_name": "Galvan",
-        "email": "rgalvann@youtube.com",
-        "gender": "Female",
-        "University": "Universidad Nacional Andrés Bello",
-        "GPA": 2.62,
-        "Major": "Architecture",
-        "Graduation Date": "1/17/2026"
-      },
-      {
-        "id": 25,
-        "first_name": "Roldan",
-        "last_name": "Cooley",
-        "email": "rcooleyo@sciencedirect.com",
-        "gender": "Male",
-        "University": "St. Anselm College",
-        "GPA": 2.85,
-        "Major": "Finance",
-        "Graduation Date": "8/16/2026"
-      },
-      {
-        "id": 26,
-        "first_name": "Tadio",
-        "last_name": "Limprecht",
-        "email": "tlimprechtp@ibm.com",
-        "gender": "Male",
-        "University": "Knightsbridge University",
-        "GPA": 3.69,
-        "Major": "Biomedical Engineering",
-        "Graduation Date": "12/23/2025"
-      },
-      {
-        "id": 27,
-        "first_name": "Dawn",
-        "last_name": "Batrop",
-        "email": "dbatropq@craigslist.org",
-        "gender": "Female",
-        "University": "National Institute of Technology, Rourkela",
-        "GPA": 3.23,
-        "Major": "Industrial Engineering",
-        "Graduation Date": "8/24/2027"
-      },
-      {
-        "id": 28,
-        "first_name": "Annnora",
-        "last_name": "Colleton",
-        "email": "acolletonr@360.cn",
-        "gender": "Female",
-        "University": "Instituto Politecnico do Porto",
-        "GPA": 3.09,
-        "Major": "Graphic Design",
-        "Graduation Date": "9/20/2029"
-      },
-      {
-        "id": 29,
-        "first_name": "Alma",
-        "last_name": "Kerrod",
-        "email": "akerrods@google.fr",
-        "gender": "Genderfluid",
-        "University": "Fachhochschule Neubrandenburg",
-        "GPA": 3.56,
-        "Major": "Linguistics",
-        "Graduation Date": "7/8/2028"
-      },
-      {
-        "id": 30,
-        "first_name": "Kristine",
-        "last_name": "Donnel",
-        "email": "kdonnelt@usda.gov",
-        "gender": "Female",
-        "University": "Kwangju National University of Education",
-        "GPA": 3.68,
-        "Major": "Education",
-        "Graduation Date": "5/20/2029"
-      },
-      {
-        "id": 31,
-        "first_name": "Stewart",
-        "last_name": "Bruckman",
-        "email": "sbruckmanu@github.com",
-        "gender": "Male",
-        "University": "Katholische Stiftungsfachhochschule München",
-        "GPA": 3.25,
-        "Major": "Information Systems",
-        "Graduation Date": "10/15/2029"
-      },
-      {
-        "id": 32,
-        "first_name": "Carine",
-        "last_name": "Gianasi",
-        "email": "cgianasiv@guardian.co.uk",
-        "gender": "Female",
-        "University": "Knox College",
-        "GPA": 2.91,
-        "Major": "Public Health",
-        "Graduation Date": "5/11/2027"
-      },
-      {
-        "id": 33,
-        "first_name": "Jaquenette",
-        "last_name": "Cotty",
-        "email": "jcottyw@ox.ac.uk",
-        "gender": "Female",
-        "University": "Thainguyen University of Agriculture and Forestry",
-        "GPA": 2.47,
-        "Major": "Agricultural Science",
-        "Graduation Date": "11/3/2025"
-      },
-      {
-        "id": 34,
-        "first_name": "Marjie",
-        "last_name": "Luckin",
-        "email": "mluckinx@posterous.com",
-        "gender": "Female",
-        "University": "Ama International University",
-        "GPA": 3.41,
-        "Major": "Communications",
-        "Graduation Date": "6/9/2026"
-      },
-      {
-        "id": 35,
-        "first_name": "Judith",
-        "last_name": "Vail",
-        "email": "jvaily@mlb.com",
-        "gender": "Female",
-        "University": "Alabama Agricultural and Mechanical University",
-        "GPA": 2.12,
-        "Major": "Nursing",
-        "Graduation Date": "10/21/2027"
-      },
-      {
-        "id": 36,
-        "first_name": "Dione",
-        "last_name": "Ashman",
-        "email": "dashmanz@altervista.org",
-        "gender": "Female",
-        "University": "Winston-Salem State University",
-        "GPA": 3.73,
-        "Major": "Social Work",
-        "Graduation Date": "9/20/2029"
-      },
-      {
-        "id": 37,
-        "first_name": "Padraig",
-        "last_name": "Goodinson",
-        "email": "pgoodinson10@washingtonpost.com",
-        "gender": "Genderfluid",
-        "University": "National Aviation Academy",
-        "GPA": 2.99,
-        "Major": "Aerospace Engineering",
-        "Graduation Date": "10/23/2025"
-      },
-      {
-        "id": 38,
-        "first_name": "Jaquith",
-        "last_name": "Leavry",
-        "email": "jleavry11@domainmarket.com",
-        "gender": "Agender",
-        "University": "Rezekne Higher School",
-        "GPA": 2.04,
-        "Major": "Music",
-        "Graduation Date": "6/25/2026"
-      },
-      {
-        "id": 39,
-        "first_name": "Jannel",
-        "last_name": "Bigglestone",
-        "email": "jbigglestone12@newyorker.com",
-        "gender": "Female",
-        "University": "Pennsylvania State University - Berks-Lehigh Valley College",
-        "GPA": 3.28,
-        "Major": "Human Resources",
-        "Graduation Date": "2/25/2028"
-      },
-      {
-        "id": 40,
-        "first_name": "Ewan",
-        "last_name": "Cumberpatch",
-        "email": "ecumberpatch13@webeden.co.uk",
-        "gender": "Male",
-        "University": "Universidad Católica de Valencia",
-        "GPA": 2.88,
-        "Major": "Theater Arts",
-        "Graduation Date": "4/21/2028"
-      },
-      {
-        "id": 41,
-        "first_name": "Hortense",
-        "last_name": "Kenner",
-        "email": "hkenner14@acquirethisname.com",
-        "gender": "Female",
-        "University": "Universitas Negeri Padang",
-        "GPA": 3.17,
-        "Major": "Criminal Justice",
-        "Graduation Date": "6/5/2029"
-      },
-      {
-        "id": 42,
-        "first_name": "Neall",
-        "last_name": "Jindracek",
-        "email": "njindracek15@ehow.com",
-        "gender": "Genderfluid",
-        "University": "Mulungushi University",
-        "GPA": 3.09,
-        "Major": "Urban Planning",
-        "Graduation Date": "1/27/2026"
-      },
-      {
-        "id": 43,
-        "first_name": "Donavon",
-        "last_name": "Ciccottini",
-        "email": "dciccottini16@unblog.fr",
-        "gender": "Male",
-        "University": "Aalborg Business College",
-        "GPA": 3.01,
-        "Major": "Supply Chain Management",
-        "Graduation Date": "2/29/2028"
-      },
-      {
-        "id": 44,
-        "first_name": "Roderic",
-        "last_name": "Chew",
-        "email": "rchew17@devhub.com",
-        "gender": "Male",
-        "University": "Universidad de San Andres",
-        "GPA": 3.69,
-        "Major": "Digital Media",
-        "Graduation Date": "1/29/2029"
-      },
-      {
-        "id": 45,
-        "first_name": "Corella",
-        "last_name": "Mathias",
-        "email": "cmathias18@ed.gov",
-        "gender": "Female",
-        "University": "Khabarovsk State University of Technology",
-        "GPA": 2.28,
-        "Major": "Environmental Engineering",
-        "Graduation Date": "8/20/2026"
-      },
-      {
-        "id": 46,
-        "first_name": "Hube",
-        "last_name": "Hun",
-        "email": "hhun19@reverbnation.com",
-        "gender": "Male",
-        "University": "Diyala University",
-        "GPA": 3.06,
-        "Major": "Geology",
-        "Graduation Date": "7/13/2027"
-      },
-      {
-        "id": 47,
-        "first_name": "Ursuline",
-        "last_name": "Sapauton",
-        "email": "usapauton1a@huffingtonpost.com",
-        "gender": "Female",
-        "University": "Moldova State University",
-        "GPA": 3.6,
-        "Major": "Public Policy",
-        "Graduation Date": "8/9/2026"
-      },
-      {
-        "id": 48,
-        "first_name": "Garrett",
-        "last_name": "Guice",
-        "email": "gguice1b@ibm.com",
-        "gender": "Male",
-        "University": "Vikrama Simhapuri University",
-        "GPA": 2.36,
-        "Major": "Robotics",
-        "Graduation Date": "4/25/2029"
-      },
-      {
-        "id": 49,
-        "first_name": "Thibaud",
-        "last_name": "Heyball",
-        "email": "theyball1c@tumblr.com",
-        "gender": "Male",
-        "University": "Zabol University",
-        "GPA": 3.75,
-        "Major": "Cybersecurity",
-        "Graduation Date": "5/29/2026"
-      },
-      {
-        "id": 50,
-        "first_name": "Ethe",
-        "last_name": "Gariff",
-        "email": "egariff1d@discovery.com",
-        "gender": "Male",
-        "University": "Université Virtuelle de Tunis",
-        "GPA": 2.23,
-        "Major": "Artificial Intelligence",
-        "Graduation Date": "11/3/2025"
-      },
-      {
-        "id": 51,
-        "first_name": "Torry",
-        "last_name": "Seldner",
-        "email": "tseldner1e@bluehost.com",
-        "gender": "Non-binary",
-        "University": "Crichton College",
-        "GPA": 3.66,
-        "Major": "Cognitive Science",
-        "Graduation Date": "4/13/2029"
-      },
-      {
-        "id": 52,
-        "first_name": "Arman",
-        "last_name": "Jendas",
-        "email": "ajendas1f@hhs.gov",
-        "gender": "Male",
-        "University": "Argosy University",
-        "GPA": 3.22,
-        "Major": "Neuroscience",
-        "Graduation Date": "12/17/2029"
-      },
-      {
-        "id": 53,
-        "first_name": "Maureene",
-        "last_name": "Hawes",
-        "email": "mhawes1g@homestead.com",
-        "gender": "Female",
-        "University": "Baptist Bible College of Missouri",
-        "GPA": 3.14,
-        "Major": "Religious Studies",
-        "Graduation Date": "2/28/2028"
-      },
-      {
-        "id": 54,
-        "first_name": "Maggie",
-        "last_name": "Le Merchant",
-        "email": "mlemerchant1h@dell.com",
-        "gender": "Female",
-        "University": "Khabarovsk State University of Technology",
-        "GPA": 2.63,
-        "Major": "Materials Science",
-        "Graduation Date": "4/17/2025"
-      },
-      {
-        "id": 55,
-        "first_name": "Carri",
-        "last_name": "Clappson",
-        "email": "cclappson1i@google.com.au",
-        "gender": "Female",
-        "University": "St. Joseph's College New York",
-        "GPA": 2.33,
-        "Major": "Forensic Science",
-        "Graduation Date": "6/30/2027"
-      },
-      {
-        "id": 56,
-        "first_name": "Ripley",
-        "last_name": "Unthank",
-        "email": "runthank1j@ted.com",
-        "gender": "Genderqueer",
-        "University": "Institute of Business Management ",
-        "GPA": 3.77,
-        "Major": "Business Analytics",
-        "Graduation Date": "10/18/2026"
-      },
-      {
-        "id": 57,
-        "first_name": "Aubrey",
-        "last_name": "Szapiro",
-        "email": "aszapiro1k@fema.gov",
-        "gender": "Male",
-        "University": "Universidade Lusíada de Angola",
-        "GPA": 2.84,
-        "Major": "Marine Biology",
-        "Graduation Date": "11/26/2025"
-      },
-      {
-        "id": 58,
-        "first_name": "Shelton",
-        "last_name": "Colthurst",
-        "email": "scolthurst1l@addthis.com",
-        "gender": "Male",
-        "University": "Shibaura Institute of Technology",
-        "GPA": 2.78,
-        "Major": "Nuclear Engineering",
-        "Graduation Date": "4/27/2026"
-      },
-      {
-        "id": 59,
-        "first_name": "Lyle",
-        "last_name": "Meiklejohn",
-        "email": "lmeiklejohn1m@census.gov",
-        "gender": "Male",
-        "University": "Sir Syed Institute Of Technology Islamabad",
-        "GPA": 2.47,
-        "Major": "Telecommunications",
-        "Graduation Date": "12/12/2029"
-      },
-      {
-        "id": 60,
-        "first_name": "Sax",
-        "last_name": "Orford",
-        "email": "sorford1n@sphinn.com",
-        "gender": "Male",
-        "University": "Lakshmibai National Institute of Physical Education",
-        "GPA": 2.6,
-        "Major": "Sports Management",
-        "Graduation Date": "12/3/2029"
-      },
-      {
-        "id": 61,
-        "first_name": "Lamond",
-        "last_name": "Yaneev",
-        "email": "lyaneev1o@nytimes.com",
-        "gender": "Male",
-        "University": "Universidad de Alcalá de Henares",
-        "GPA": 2.26,
-        "Major": "Classical Studies",
-        "Graduation Date": "4/6/2025"
-      },
-      {
-        "id": 62,
-        "first_name": "Ansel",
-        "last_name": "Weddeburn - Scrimgeour",
-        "email": "aweddeburnscrimgeour1p@forbes.com",
-        "gender": "Genderfluid",
-        "University": "Medical Academy of Latvia",
-        "GPA": 3.83,
-        "Major": "Medical Technology",
-        "Graduation Date": "6/12/2027"
-      },
-      {
-        "id": 63,
-        "first_name": "Carly",
-        "last_name": "Ewert",
-        "email": "cewert1q@163.com",
-        "gender": "Male",
-        "University": "Mahatma Gandhi Chitrakut Gramoday University",
-        "GPA": 3.77,
-        "Major": "Peace Studies",
-        "Graduation Date": "4/25/2028"
-      },
-      {
-        "id": 64,
-        "first_name": "Bartolemo",
-        "last_name": "Danser",
-        "email": "bdanser1r@barnesandnoble.com",
-        "gender": "Male",
-        "University": "Universiti Teknikal Malaysia Melaka",
-        "GPA": 2.75,
-        "Major": "Mechatronics",
-        "Graduation Date": "5/19/2025"
-      },
-      {
-        "id": 65,
-        "first_name": "Serene",
-        "last_name": "Gillbanks",
-        "email": "sgillbanks1s@globo.com",
-        "gender": "Genderqueer",
-        "University": "University of Newcastle",
-        "GPA": 3.78,
-        "Major": "Oceanography",
-        "Graduation Date": "10/8/2025"
-      },
-      {
-        "id": 66,
-        "first_name": "Boris",
-        "last_name": "Hinkes",
-        "email": "bhinkes1t@quantcast.com",
-        "gender": "Male",
-        "University": "Belarussian State Economic University",
-        "GPA": 2.21,
-        "Major": "International Business",
-        "Graduation Date": "10/2/2028"
-      },
-      {
-        "id": 67,
-        "first_name": "Francklin",
-        "last_name": "Galsworthy",
-        "email": "fgalsworthy1u@google.nl",
-        "gender": "Male",
-        "University": "Allegheny College",
-        "GPA": 3.99,
-        "Major": "Astrophysics",
-        "Graduation Date": "1/7/2027"
-      },
-      {
-        "id": 68,
-        "first_name": "Maurise",
-        "last_name": "Woodhead",
-        "email": "mwoodhead1v@example.com",
-        "gender": "Male",
-        "University": "The School of the Art Institute of Chicago",
-        "GPA": 3.64,
-        "Major": "Fine Arts",
-        "Graduation Date": "12/16/2029"
-      },
-      {
-        "id": 69,
-        "first_name": "Sapphira",
-        "last_name": "Lafuente",
-        "email": "slafuente1w@paypal.com",
-        "gender": "Female",
-        "University": "Baikal National University of Economics and Law",
-        "GPA": 3.55,
-        "Major": "Economic Development",
-        "Graduation Date": "10/23/2028"
-      },
-      {
-        "id": 70,
-        "first_name": "Sheffield",
-        "last_name": "Pinshon",
-        "email": "spinshon1x@gov.uk",
-        "gender": "Male",
-        "University": "Pan Africa Christian University",
-        "GPA": 3.92,
-        "Major": "Theology",
-        "Graduation Date": "12/26/2026"
-      },
-      {
-        "id": 71,
-        "first_name": "Adda",
-        "last_name": "Manifold",
-        "email": "amanifold1y@ebay.co.uk",
-        "gender": "Female",
-        "University": "Canisius College",
-        "GPA": 3.31,
-        "Major": "Creative Writing",
-        "Graduation Date": "5/15/2029"
-      },
-      {
-        "id": 72,
-        "first_name": "Perri",
-        "last_name": "Cotterel",
-        "email": "pcotterel1z@360.cn",
-        "gender": "Female",
-        "University": "Middlesex University",
-        "GPA": 2.16,
-        "Major": "Film Studies",
-        "Graduation Date": "1/9/2026"
-      },
-      {
-        "id": 73,
-        "first_name": "Pam",
-        "last_name": "Scoffham",
-        "email": "pscoffham20@cnn.com",
-        "gender": "Female",
-        "University": "Mount Carmel College of Nursing",
-        "GPA": 2.36,
-        "Major": "Health Informatics",
-        "Graduation Date": "11/10/2026"
-      },
-      {
-        "id": 74,
-        "first_name": "Eric",
-        "last_name": "Scotting",
-        "email": "escotting21@a8.net",
-        "gender": "Male",
-        "University": "School for International Training",
-        "GPA": 2.76,
-        "Major": "Global Studies",
-        "Graduation Date": "7/22/2025"
-      },
-      {
-        "id": 75,
-        "first_name": "Noelani",
-        "last_name": "Labrenz",
-        "email": "nlabrenz22@un.org",
-        "gender": "Female",
-        "University": "Hebei Agricultural University",
-        "GPA": 2.38,
-        "Major": "Food Science",
-        "Graduation Date": "1/4/2029"
-      },
-      {
-        "id": 76,
-        "first_name": "Budd",
-        "last_name": "Curling",
-        "email": "bcurling23@desdev.cn",
-        "gender": "Male",
-        "University": "Sheridan College",
-        "GPA": 2.65,
-        "Major": "Game Design",
-        "Graduation Date": "8/12/2027"
-      },
-      {
-        "id": 77,
-        "first_name": "Paddy",
-        "last_name": "Chimes",
-        "email": "pchimes24@so-net.ne.jp",
-        "gender": "Male",
-        "University": "Fachhochschule Augsburg",
-        "GPA": 3.31,
-        "Major": "Renewable Energy",
-        "Graduation Date": "7/12/2025"
-      },
-      {
-        "id": 78,
-        "first_name": "Annadiane",
-        "last_name": "Burrow",
-        "email": "aburrow25@jugem.jp",
-        "gender": "Female",
-        "University": "Ross University Caribbean School of Veterinary Medicine",
-        "GPA": 2.89,
-        "Major": "Veterinary Science",
-        "Graduation Date": "9/30/2026"
-      },
-      {
-        "id": 79,
-        "first_name": "Cristiano",
-        "last_name": "Saltwell",
-        "email": "csaltwell26@infoseek.co.jp",
-        "gender": "Male",
-        "University": "Ashikaga Institute of Technology",
-        "GPA": 3.5,
-        "Major": "Nanotechnology",
-        "Graduation Date": "5/2/2028"
-      },
-      {
-        "id": 80,
-        "first_name": "Em",
-        "last_name": "Danzelman",
-        "email": "edanzelman27@unicef.org",
-        "gender": "Bigender",
-        "University": "Instituto Superior de Saúde do Alto Ave",
-        "GPA": 2.28,
-        "Major": "Public Administration",
-        "Graduation Date": "5/18/2028"
-      },
-      {
-        "id": 81,
-        "first_name": "Hunfredo",
-        "last_name": "Pigney",
-        "email": "hpigney28@noaa.gov",
-        "gender": "Male",
-        "University": "Greensboro College",
-        "GPA": 3.2,
-        "Major": "Meteorology",
-        "Graduation Date": "4/29/2028"
-      },
-      {
-        "id": 82,
-        "first_name": "Mandel",
-        "last_name": "Janowski",
-        "email": "mjanowski29@nih.gov",
-        "gender": "Male",
-        "University": "American University",
-        "GPA": 3.18,
-        "Major": "International Law",
-        "Graduation Date": "2/9/2027"
-      },
-      {
-        "id": 83,
-        "first_name": "Arielle",
-        "last_name": "Karpf",
-        "email": "akarpf2a@usda.gov",
-        "gender": "Bigender",
-        "University": "Bharathidasan University",
-        "GPA": 2.79,
-        "Major": "Gender Studies",
-        "Graduation Date": "7/25/2027"
-      },
-      {
-        "id": 84,
-        "first_name": "Evelyn",
-        "last_name": "Thames",
-        "email": "ethames2b@hud.gov",
-        "gender": "Female",
-        "University": "University of Architecture, Civil Engineering and Geodesy",
-        "GPA": 2.6,
-        "Major": "Urban Design",
-        "Graduation Date": "7/29/2026"
-      },
-      {
-        "id": 85,
-        "first_name": "Fifine",
-        "last_name": "Lampitt",
-        "email": "flampitt2c@sourceforge.net",
-        "gender": "Genderqueer",
-        "University": "Olivet Nazarene University",
-        "GPA": 2.36,
-        "Major": "Ethics",
-        "Graduation Date": "7/8/2026"
-      },
-      {
-        "id": 86,
-        "first_name": "Bradly",
-        "last_name": "O'Farrell",
-        "email": "bofarrell2d@admin.ch",
-        "gender": "Male",
-        "University": "Western International University",
-        "GPA": 2.57,
-        "Major": "Digital Marketing",
-        "Graduation Date": "1/18/2029"
-      },
-      {
-        "id": 87,
-        "first_name": "Annalee",
-        "last_name": "Pincked",
-        "email": "apincked2e@clickbank.net",
-        "gender": "Female",
-        "University": "Atlanta Christian College",
-        "GPA": 3.85,
-        "Major": "Biblical Studies",
-        "Graduation Date": "7/15/2028"
-      },
-      {
-        "id": 88,
-        "first_name": "Gipsy",
-        "last_name": "Annesley",
-        "email": "gannesley2f@e-recht24.de",
-        "gender": "Female",
-        "University": "Fujian Normal University",
-        "GPA": 3.17,
-        "Major": "Translation Studies",
-        "Graduation Date": "6/1/2027"
-      },
-      {
-        "id": 89,
-        "first_name": "Filippo",
-        "last_name": "Tschiersch",
-        "email": "ftschiersch2g@surveymonkey.com",
-        "gender": "Male",
-        "University": "St. Mary's College of California",
-        "GPA": 3.02,
-        "Major": "Medieval Studies",
-        "Graduation Date": "8/21/2028"
-      },
-      {
-        "id": 90,
-        "first_name": "Rois",
-        "last_name": "Puleston",
-        "email": "rpuleston2h@zimbio.com",
-        "gender": "Female",
-        "University": "Enugu State University of Science and Technology",
-        "GPA": 3.56,
-        "Major": "Biotechnology",
-        "Graduation Date": "9/28/2026"
-      },
-      {
-        "id": 91,
-        "first_name": "Duke",
-        "last_name": "Pessler",
-        "email": "dpessler2i@fda.gov",
-        "gender": "Male",
-        "University": "Avondale College",
-        "GPA": 2.87,
-        "Major": "Music Therapy",
-        "Graduation Date": "2/3/2026"
-      },
-      {
-        "id": 92,
-        "first_name": "Brice",
-        "last_name": "Kevern",
-        "email": "bkevern2j@google.com",
-        "gender": "Male",
-        "University": "Claremont McKenna College",
-        "GPA": 2.66,
-        "Major": "Entrepreneurship",
-        "Graduation Date": "7/8/2029"
-      },
-      {
-        "id": 93,
-        "first_name": "Salmon",
-        "last_name": "Zannotelli",
-        "email": "szannotelli2k@census.gov",
-        "gender": "Male",
-        "University": "College of Science, Baghdad University",
-        "GPA": 3.37,
-        "Major": "Quantum Physics",
-        "Graduation Date": "8/3/2028"
-      },
-      {
-        "id": 94,
-        "first_name": "Zebulen",
-        "last_name": "Malter",
-        "email": "zmalter2l@apple.com",
-        "gender": "Male",
-        "University": "Osaka University of Foreign Studies",
-        "GPA": 2.22,
-        "Major": "Japanese Studies",
-        "Graduation Date": "4/18/2025"
-      },
-      {
-        "id": 95,
-        "first_name": "Jimmy",
-        "last_name": "Chatelet",
-        "email": "jchatelet2m@odnoklassniki.ru",
-        "gender": "Male",
-        "University": "University of Nebraska - Kearney",
-        "GPA": 3.75,
-        "Major": "Sports Medicine",
-        "Graduation Date": "5/6/2027"
-      },
-      {
-        "id": 96,
-        "first_name": "Elyse",
-        "last_name": "Ayscough",
-        "email": "eayscough2n@tumblr.com",
-        "gender": "Female",
-        "University": "Technological University (Pyay)",
-        "GPA": 3.86,
-        "Major": "Sustainable Development",
-        "Graduation Date": "12/17/2029"
-      },
-      {
-        "id": 97,
-        "first_name": "Hedvige",
-        "last_name": "Samweyes",
-        "email": "hsamweyes2o@example.com",
-        "gender": "Genderfluid",
-        "University": "Athenaeum of Ohio",
-        "GPA": 2.93,
-        "Major": "Pastoral Studies",
-        "Graduation Date": "2/18/2026"
-      },
-      {
-        "id": 98,
-        "first_name": "Addie",
-        "last_name": "Simanek",
-        "email": "asimanek2p@virginia.edu",
-        "gender": "Male",
-        "University": "The Government Sadiq College Women University Bahawalpur",
-        "GPA": 2.22,
-        "Major": "Women's Studies",
-        "Graduation Date": "10/15/2025"
-      },
-      {
-        "id": 99,
-        "first_name": "Roseann",
-        "last_name": "Eckery",
-        "email": "reckery2q@vimeo.com",
-        "gender": "Female",
-        "University": "Universidad de Cuenca",
-        "GPA": 3.99,
-        "Major": "Museum Studies",
-        "Graduation Date": "4/1/2029"
-      },
-      {
-        "id": 100,
-        "first_name": "Sherilyn",
-        "last_name": "Schutt",
-        "email": "sschutt2r@businessinsider.com",
-        "gender": "Female",
-        "University": "Golden Gate University",
-        "GPA": 2.91,
-        "Major": "Hospitality Management",
-        "Graduation Date": "11/25/2027"
+        "first_name": "Aisha",
+        "last_name": "Patel",
+        "email": "apatel@berkeley.edu",
+        "phone": "+1-555-345-6789",
+        "linkedin": "https://linkedin.com/in/aisha-patel",
+        "github": "https://github.com/apatel-dev",
+        "education": {
+          "university": "UC Berkeley",
+          "major": "Data Science",
+          "minor": "Business Administration",
+          "gpa": 3.93,
+          "graduation_date": "2025-05-20",
+          "expected_degree": "Bachelor of Science"
+        },
+        "skills": [
+          "Machine Learning",
+          "Deep Learning",
+          "SQL",
+          "Python",
+          "R",
+          "Tableau",
+          "Big Data Analytics"
+        ],
+        "experience": [
+          {
+            "title": "Data Science Intern",
+            "company": "Google",
+            "location": "Mountain View, CA",
+            "start_date": "2023-05",
+            "end_date": "2023-08",
+            "description": "Developed ML models for user behavior prediction"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Predictive Healthcare Analytics",
+            "description": "Built ML system for early disease prediction using health records",
+            "technologies": ["Python", "TensorFlow", "SQL", "AWS"],
+            "github_link": "https://github.com/apatel-dev/health-predictor"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "TensorFlow Developer Certificate",
+            "issuer": "Google",
+            "date_earned": "2023-06",
+            "expiry_date": "N/A"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "proficiency": "Native"
+          },
+          {
+            "name": "Hindi",
+            "proficiency": "Professional"
+          },
+          {
+            "name": "Gujarati",
+            "proficiency": "Professional"
+          }
+        ],
+        "work_authorization": "US Citizen",
+        "location": {
+          "current": "Berkeley, CA",
+          "willing_to_relocate": true,
+          "preferred_locations": ["San Francisco", "Seattle", "New York"]
+        }
       }
     ]
   }

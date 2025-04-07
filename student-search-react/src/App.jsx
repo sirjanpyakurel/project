@@ -7,16 +7,19 @@ function App() {
   const [students, setStudents] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [majors, setMajors] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
   const [filters, setFilters] = useState({
     searchTerm: '',
     major: 'all',
     gpa: 'all',
+    skills: [],
+    graduationYear: 'all',
     sortBy: 'name'
   });
 
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
 
   useEffect(() => {
     fetchStudents();
@@ -30,8 +33,13 @@ function App() {
       }
       const data = await response.json();
       setStudents(data);
-      const uniqueMajors = [...new Set(data.map(student => student.Major))].sort();
+      
+      // Extract unique majors and skills
+      const uniqueMajors = [...new Set(data.map(student => student.education.major))].sort();
+      const uniqueSkills = [...new Set(data.flatMap(student => student.skills))].sort();
+      
       setMajors(uniqueMajors);
+      setSkills(uniqueSkills);
     } catch (error) {
       setError(error.message);
     }
@@ -44,19 +52,27 @@ function App() {
   const filterStudents = () => {
     let filtered = students.filter(student => {
       const fullName = `${student.first_name} ${student.last_name}`.toLowerCase();
+      const searchTerm = filters.searchTerm.toLowerCase();
+      
       const searchMatch = filters.searchTerm === '' ||
-        fullName.includes(filters.searchTerm.toLowerCase()) ||
-        student.Major.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
-        student.University.toLowerCase().includes(filters.searchTerm.toLowerCase());
+        fullName.includes(searchTerm) ||
+        student.education.university.toLowerCase().includes(searchTerm) ||
+        student.skills.some(skill => skill.toLowerCase().includes(searchTerm));
 
-      const majorMatch = filters.major === 'all' || student.Major === filters.major;
+      const majorMatch = filters.major === 'all' || student.education.major === filters.major;
 
       const gpaMatch = filters.gpa === 'all' ||
-        (filters.gpa === '3.5+' && student.GPA >= 3.5) ||
-        (filters.gpa === '3.0-3.49' && student.GPA >= 3.0 && student.GPA < 3.5) ||
-        (filters.gpa === 'below3.0' && student.GPA < 3.0);
+        (filters.gpa === '3.5+' && student.education.gpa >= 3.5) ||
+        (filters.gpa === '3.0-3.49' && student.education.gpa >= 3.0 && student.education.gpa < 3.5) ||
+        (filters.gpa === 'below3.0' && student.education.gpa < 3.0);
 
-      return searchMatch && majorMatch && gpaMatch;
+      const skillsMatch = filters.skills.length === 0 ||
+        filters.skills.every(skill => student.skills.includes(skill));
+
+      const graduationYear = new Date(student.education.graduation_date).getFullYear().toString();
+      const yearMatch = filters.graduationYear === 'all' || graduationYear === filters.graduationYear;
+
+      return searchMatch && majorMatch && gpaMatch && skillsMatch && yearMatch;
     });
 
     // Sort students
@@ -65,9 +81,9 @@ function App() {
         case 'name':
           return `${a.first_name} ${a.last_name}`.localeCompare(`${b.first_name} ${b.last_name}`);
         case 'major':
-          return a.Major.localeCompare(b.Major);
+          return a.education.major.localeCompare(b.education.major);
         case 'gpa':
-          return b.GPA - a.GPA;
+          return b.education.gpa - a.education.gpa;
         default:
           return 0;
       }
@@ -112,6 +128,7 @@ function App() {
         filters={filters}
         onFilterChange={handleFilterChange}
         majors={majors}
+        skills={skills}
       />
 
       {error && (
@@ -125,11 +142,11 @@ function App() {
           Found {filteredStudents.length} students
         </Typography>
         <Typography variant="subtitle1">
-          Page {page} of {pageCount}
+          Page {page} of {pageCount || 1}
         </Typography>
       </Box>
 
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         {displayedStudents.map(student => (
           <Grid item xs={12} sm={6} md={4} key={student.id}>
             <StudentCard student={student} />

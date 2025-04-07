@@ -1,6 +1,6 @@
-import { Box, TextField, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Box, TextField, Select, MenuItem, FormControl, InputLabel, Autocomplete, Chip } from '@mui/material';
 
-const SearchFilters = ({ filters, onFilterChange, majors }) => {
+const SearchFilters = ({ filters, onFilterChange, majors, skills }) => {
   return (
     <Box sx={{ mb: 3, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
       <TextField
@@ -9,6 +9,7 @@ const SearchFilters = ({ filters, onFilterChange, majors }) => {
         value={filters.searchTerm}
         onChange={(e) => onFilterChange('searchTerm', e.target.value)}
         sx={{ minWidth: 200 }}
+        placeholder="Search by name, university, or skills"
       />
 
       <FormControl sx={{ minWidth: 200 }}>
@@ -41,16 +42,40 @@ const SearchFilters = ({ filters, onFilterChange, majors }) => {
         </Select>
       </FormControl>
 
+      <Autocomplete
+        multiple
+        options={skills || []}
+        value={filters.skills || []}
+        onChange={(e, newValue) => onFilterChange('skills', newValue)}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Skills"
+            variant="outlined"
+            placeholder="Select skills"
+          />
+        )}
+        renderTags={(value, getTagProps) =>
+          value.map((option, index) => (
+            <Chip label={option} {...getTagProps({ index })} />
+          ))
+        }
+        sx={{ minWidth: 300 }}
+      />
+
       <FormControl sx={{ minWidth: 200 }}>
-        <InputLabel>Sort By</InputLabel>
+        <InputLabel>Graduation Year</InputLabel>
         <Select
-          value={filters.sortBy}
-          label="Sort By"
-          onChange={(e) => onFilterChange('sortBy', e.target.value)}
+          value={filters.graduationYear}
+          label="Graduation Year"
+          onChange={(e) => onFilterChange('graduationYear', e.target.value)}
         >
-          <MenuItem value="name">Name</MenuItem>
-          <MenuItem value="major">Major</MenuItem>
-          <MenuItem value="gpa">GPA</MenuItem>
+          <MenuItem value="all">All Years</MenuItem>
+          <MenuItem value="2024">2024</MenuItem>
+          <MenuItem value="2025">2025</MenuItem>
+          <MenuItem value="2026">2026</MenuItem>
+          <MenuItem value="2027">2027</MenuItem>
+          <MenuItem value="2028">2028</MenuItem>
         </Select>
       </FormControl>
     </Box>
