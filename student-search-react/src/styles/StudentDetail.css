@@ -1,0 +1,294 @@
+.student-detail-container {
+  padding: 2rem 4rem;
+}
+
+.student-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.student-detail-back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.student-detail-back-button:hover {
+  color: #1565c0;
+}
+
+.student-detail-back-button svg {
+  margin-right: 0.5rem;
+}
+
+.student-detail-export-button {
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.student-detail-export-button:hover {
+  background-color: #1565c0;
+}
+
+.student-detail-export-button svg {
+  margin-right: 0.5rem;
+}
+
+.student-detail-content {
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.student-detail-profile {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.student-detail-avatar {
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(45deg, #2196F3 30%, #21CBF3 90%);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.student-detail-name {
+  margin-bottom: 0.5rem;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+.student-detail-info {
+  margin-top: 2rem;
+}
+
+.info-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.section-title svg {
+  margin-right: 0.5rem;
+}
+
+.info-item {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info-item p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.skill-chip {
+  background: linear-gradient(45deg, #2196F3 30%, #21CBF3 90%);
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+}
+
+.project-item {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.project-item:hover {
+  transform: translateY(-2px);
+}
+
+.project-title {
+  color: #1976d2;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.student-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.student-detail-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.student-detail-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1976d2;
+  display: flex;
+  align-items: center;
+}
+
+.student-detail-card-title svg {
+  margin-right: 0.5rem;
+}
+
+.student-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-detail-list-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.student-detail-list-item:last-child {
+  border-bottom: none;
+}
+
+.student-detail-list-item svg {
+  margin-right: 1rem;
+  color: #1976d2;
+}
+
+.student-detail-experience-item {
+  margin-bottom: 1.5rem;
+}
+
+.student-detail-experience-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.student-detail-experience-subtitle {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.student-detail-experience-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.student-detail-project {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.student-detail-project:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.student-detail-project-technologies {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.student-detail-project-link {
+  display: inline-flex;
+  align-items: center;
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.student-detail-project-link:hover {
+  color: #1565c0;
+}
+
+.student-detail-project-link svg {
+  margin-right: 0.5rem;
+}
+
+.student-detail-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.student-detail-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .student-detail-container {
+    padding: 1rem 2rem;
+  }
+  
+  .student-detail-content {
+    padding: 1.5rem 2rem;
+  }
+  
+  .student-detail-profile {
+    margin-bottom: 2rem;
+  }
+  
+  .info-section {
+    padding: 1rem;
+  }
+} 

@@ -1,243 +1,192 @@
-import { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  Container,
-  Paper,
-  Typography,
-  Grid,
-  Box,
+import { 
+  Box, 
+  Typography, 
+  Button, 
+  Avatar, 
   Chip,
-  Button,
-  Divider,
-  List,
-  ListItem,
-  ListItemText,
-  IconButton,
-  Link,
-  Card,
-  CardContent,
+  Paper,
+  Divider
 } from '@mui/material';
-import {
-  ArrowBack as ArrowBackIcon,
-  Email as EmailIcon,
-  Phone as PhoneIcon,
-  LinkedIn as LinkedInIcon,
-  GitHub as GitHubIcon,
-  School as SchoolIcon,
-  Work as WorkIcon,
-  Code as CodeIcon,
-  Language as LanguageIcon,
-  LocationOn as LocationIcon,
-  CalendarToday as CalendarIcon,
+import { 
+  ArrowBack, 
+  School, 
+  Code, 
+  Work, 
+  Email, 
+  Phone, 
+  GitHub, 
+  LinkedIn,
+  Description
 } from '@mui/icons-material';
+import { generateStudentPDF } from '../pdfExport';
+import '../styles/StudentDetail.css';
 
 const StudentDetail = ({ student }) => {
   const navigate = useNavigate();
 
-  const handleBack = () => {
-    navigate('/');
+  const handleExportPDF = () => {
+    try {
+      const doc = generateStudentPDF(student);
+      const fileName = `${student.name.replace(/\s+/g, '_')}_profile.pdf`;
+      doc.save(fileName);
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      alert('Error generating PDF. Please try again.');
+    }
   };
 
-  return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
-      <Button
-        startIcon={<ArrowBackIcon />}
-        onClick={handleBack}
-        sx={{ mb: 3 }}
-      >
-        Back to Search
-      </Button>
+  if (!student) {
+    return (
+      <Box className="student-detail-container">
+        <Typography variant="h5" color="error">
+          Student not found
+        </Typography>
+      </Box>
+    );
+  }
 
-      <Paper elevation={3} sx={{ p: 4 }}>
-        {/* Header Section */}
-        <Box sx={{ mb: 4 }}>
-          <Typography variant="h4" gutterBottom>
-            {student.first_name} {student.last_name}
+  return (
+    <Box className="student-detail-container">
+      <Box className="student-detail-header">
+        <Button
+          startIcon={<ArrowBack />}
+          onClick={() => navigate('/')}
+          className="student-detail-back-button"
+        >
+          Back to Students
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleExportPDF}
+          startIcon={<Description />}
+        >
+          Export PDF
+        </Button>
+      </Box>
+
+      <Paper className="student-detail-content">
+        <Box className="student-detail-profile">
+          <Avatar 
+            className="student-detail-avatar"
+            sx={{ width: 120, height: 120 }}
+          >
+            {student.name.charAt(0)}
+          </Avatar>
+          <Typography variant="h4" className="student-detail-name">
+            {student.name}
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-            {student.education.major} Student at {student.education.university}
+          <Typography variant="subtitle1" color="text.secondary">
+            {student.major} • {student.university}
           </Typography>
         </Box>
 
-        <Grid container spacing={4}>
-          {/* Left Column - Contact & Basic Info */}
-          <Grid item xs={12} md={4}>
-            <Card sx={{ mb: 3 }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Contact Information
-                </Typography>
-                <List>
-                  <ListItem>
-                    <EmailIcon sx={{ mr: 2 }} />
-                    <ListItemText primary={student.email} />
-                  </ListItem>
-                  <ListItem>
-                    <PhoneIcon sx={{ mr: 2 }} />
-                    <ListItemText primary={student.phone} />
-                  </ListItem>
-                  <ListItem>
-                    <LinkedInIcon sx={{ mr: 2 }} />
-                    <Link href={student.linkedin} target="_blank" rel="noopener">
-                      LinkedIn Profile
-                    </Link>
-                  </ListItem>
-                  <ListItem>
-                    <GitHubIcon sx={{ mr: 2 }} />
-                    <Link href={student.github} target="_blank" rel="noopener">
-                      GitHub Profile
-                    </Link>
-                  </ListItem>
-                </List>
-              </CardContent>
-            </Card>
+        <Box className="student-detail-info">
+          {/* Education Section */}
+          <Box className="info-section">
+            <Box className="section-title">
+              <School />
+              <Typography variant="h6">Education</Typography>
+            </Box>
+            <Box className="info-item">
+              <Typography variant="body1">
+                <strong>University:</strong> {student.university}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Major:</strong> {student.major}
+              </Typography>
+              <Typography variant="body1">
+                <strong>GPA:</strong> {student.gpa}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Graduation Year:</strong> {student.graduationYear}
+              </Typography>
+            </Box>
+          </Box>
 
-            <Card sx={{ mb: 3 }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Education
-                </Typography>
-                <List>
-                  <ListItem>
-                    <SchoolIcon sx={{ mr: 2 }} />
-                    <ListItemText 
-                      primary={student.education.university}
-                      secondary={`${student.education.major} ${student.education.minor ? `with ${student.education.minor} minor` : ''}`}
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <CalendarIcon sx={{ mr: 2 }} />
-                    <ListItemText 
-                      primary={`Expected Graduation: ${new Date(student.education.graduation_date).toLocaleDateString()}`}
-                      secondary={`GPA: ${student.education.gpa}`}
-                    />
-                  </ListItem>
-                </List>
-              </CardContent>
-            </Card>
+          {/* Skills Section */}
+          <Box className="info-section">
+            <Box className="section-title">
+              <Code />
+              <Typography variant="h6">Skills</Typography>
+            </Box>
+            <Box className="skills-container">
+              {student.skills.map((skill, index) => (
+                <Chip
+                  key={index}
+                  label={skill}
+                  className="skill-chip"
+                />
+              ))}
+            </Box>
+          </Box>
 
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Location & Work Authorization
+          {/* Contact Section */}
+          <Box className="info-section">
+            <Box className="section-title">
+              <Email />
+              <Typography variant="h6">Contact Information</Typography>
+            </Box>
+            <Box className="info-item">
+              <Typography variant="body1">
+                <Email sx={{ mr: 1 }} /> {student.email}
+              </Typography>
+              <Typography variant="body1">
+                <Phone sx={{ mr: 1 }} /> {student.phone}
+              </Typography>
+              {student.github && (
+                <Typography variant="body1">
+                  <GitHub sx={{ mr: 1 }} /> 
+                  <a href={student.github} target="_blank" rel="noopener noreferrer">
+                    GitHub Profile
+                  </a>
                 </Typography>
-                <List>
-                  <ListItem>
-                    <LocationIcon sx={{ mr: 2 }} />
-                    <ListItemText 
-                      primary={`Current Location: ${student.location.current}`}
-                      secondary={`Willing to relocate: ${student.location.willing_to_relocate ? 'Yes' : 'No'}`}
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <LanguageIcon sx={{ mr: 2 }} />
-                    <ListItemText 
-                      primary="Work Authorization"
-                      secondary={student.work_authorization}
-                    />
-                  </ListItem>
-                </List>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Right Column - Skills, Experience, Projects */}
-          <Grid item xs={12} md={8}>
-            {/* Skills Section */}
-            <Card sx={{ mb: 3 }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Skills
+              )}
+              {student.linkedin && (
+                <Typography variant="body1">
+                  <LinkedIn sx={{ mr: 1 }} /> 
+                  <a href={student.linkedin} target="_blank" rel="noopener noreferrer">
+                    LinkedIn Profile
+                  </a>
                 </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {student.skills.map((skill, index) => (
-                    <Chip key={index} label={skill} color="primary" variant="outlined" />
-                  ))}
-                </Box>
-              </CardContent>
-            </Card>
+              )}
+            </Box>
+          </Box>
 
-            {/* Experience Section */}
-            <Card sx={{ mb: 3 }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Experience
+          {/* Projects Section */}
+          <Box className="info-section">
+            <Box className="section-title">
+              <Description />
+              <Typography variant="h6">Projects</Typography>
+            </Box>
+            {student.projects.map((project, index) => (
+              <Box key={index} className="project-item">
+                <Typography variant="h6" className="project-title">
+                  {project.title}
                 </Typography>
-                {student.experience.map((exp, index) => (
-                  <Box key={index} sx={{ mb: 2 }}>
-                    <Typography variant="subtitle1" gutterBottom>
-                      {exp.position} at {exp.company}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                      {exp.location} • {exp.start_date} - {exp.end_date}
-                    </Typography>
-                    <Typography variant="body2">
-                      {exp.description}
-                    </Typography>
-                    <Divider sx={{ my: 2 }} />
-                  </Box>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* Projects Section */}
-            <Card sx={{ mb: 3 }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Projects
+                <Typography variant="body1" className="project-description">
+                  {project.description}
                 </Typography>
-                {student.projects.map((project, index) => (
-                  <Box key={index} sx={{ mb: 2 }}>
-                    <Typography variant="subtitle1" gutterBottom>
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                      {project.technologies.join(', ')}
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      {project.description}
-                    </Typography>
-                    {project.github && (
-                      <Link href={project.github} target="_blank" rel="noopener">
-                        <Button
-                          startIcon={<GitHubIcon />}
-                          size="small"
-                          sx={{ mt: 1 }}
-                        >
-                          View on GitHub
-                        </Button>
-                      </Link>
-                    )}
-                    <Divider sx={{ my: 2 }} />
-                  </Box>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* Certifications Section */}
-            {student.certifications && student.certifications.length > 0 && (
-              <Card>
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    Certifications
+                {project.technologies && (
+                  <Typography variant="body2" color="text.secondary">
+                    Technologies: {project.technologies}
                   </Typography>
-                  <List>
-                    {student.certifications.map((cert, index) => (
-                      <ListItem key={index}>
-                        <ListItemText
-                          primary={cert.name}
-                          secondary={`${cert.issuer} • ${cert.date}`}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                </CardContent>
-              </Card>
-            )}
-          </Grid>
-        </Grid>
+                )}
+                {project.link && (
+                  <Typography variant="body2">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      View Project
+                    </a>
+                  </Typography>
+                )}
+              </Box>
+            ))}
+          </Box>
+        </Box>
       </Paper>
-    </Container>
+    </Box>
   );
 };
 

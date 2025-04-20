@@ -1,0 +1,52 @@
+.search-filters-container {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-filters-grid {
+  margin-top: 1rem;
+}
+
+.search-filters-form-control {
+  margin-bottom: 1rem;
+}
+
+.search-filters-form-control .MuiOutlinedInput-root {
+  background-color: white;
+}
+
+.search-filters-form-control .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #1976d2;
+}
+
+.search-filters-form-control .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #1976d2;
+  border-width: 2px;
+}
+
+.search-filters-form-control .MuiInputLabel-root {
+  color: #666;
+}
+
+.search-filters-form-control .MuiInputLabel-root.Mui-focused {
+  color: #1976d2;
+}
+
+.search-filters-form-control .MuiSelect-select {
+  background-color: white;
+}
+
+.search-filters-form-control .MuiSelect-select:hover {
+  background-color: #f5f5f5;
+}
+
+.search-filters-form-control .MuiSelect-select.Mui-focused {
+  background-color: white;
+}
+
+.search-filters-form-control .MuiInputLabel-root.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(0.75);
+} 
