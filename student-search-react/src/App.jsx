@@ -124,6 +124,17 @@ const App = () => {
           throw new Error('Failed to fetch students');
         }
         const data = await response.json();
+        console.log('First student complete data:', JSON.stringify(data[0], null, 2));
+
+        // Sort students by first name initial before setting state
+        data.sort((a, b) => {
+          const aFirst = (a.first_name || a.FirstName || a.name?.split(' ')[0] || '').toLowerCase();
+          const bFirst = (b.first_name || b.FirstName || b.name?.split(' ')[0] || '').toLowerCase();
+          if (aFirst < bFirst) return -1;
+          if (aFirst > bFirst) return 1;
+          return 0;
+        });
+
         setStudents(data);
         setFilteredStudents(data);
         setCurrentPage(1);
@@ -142,60 +153,133 @@ const App = () => {
     let filtered = [...students];
     
     if (filters.search) {
-      const searchTerm = filters.search.toLowerCase();
+      const searchTerm = filters.search.toLowerCase().trim();
       console.log('Filtering by search term:', searchTerm);
       filtered = filtered.filter(student => {
-        const fullName = `${student.first_name} ${student.last_name}`.toLowerCase();
-        console.log('Checking student:', fullName, 'includes:', searchTerm, '?', fullName.includes(searchTerm));
-        return fullName.includes(searchTerm);
+        console.log('Student object structure:', student);
+        
+        const firstName = (student.first_name || student.FirstName || student.name?.split(' ')[0] || '').toLowerCase().trim();
+        const lastName = (student.last_name || student.LastName || student.name?.split(' ')[1] || '').toLowerCase().trim();
+        
+        const fullName = `${firstName} ${lastName}`.trim();
+        const reverseName = `${lastName} ${firstName}`.trim();
+        
+        console.log('Name combinations:', {
+          firstName,
+          lastName,
+          fullName,
+          reverseName,
+          searchTerm
+        });
+        
+        return fullName.includes(searchTerm) || 
+               reverseName.includes(searchTerm) ||
+               firstName.includes(searchTerm) ||
+               lastName.includes(searchTerm);
       });
+      console.log('Number of students after name search:', filtered.length);
     }
     
     if (filters.university) {
-      const universityTerm = filters.university.toLowerCase();
+      const universityTerm = filters.university.toLowerCase().trim();
       console.log('Filtering by university:', universityTerm);
       filtered = filtered.filter(student => {
-        const university = student.education?.university?.toLowerCase() || '';
-        console.log('Checking university:', university, 'includes:', universityTerm, '?', university.includes(universityTerm));
+        // Try different possible university field locations
+        const university = (student.education?.university || 
+                          student.university || 
+                          student.University || 
+                          '').toLowerCase().trim();
+        console.log('University comparison:', university, 'vs', universityTerm);
         return university.includes(universityTerm);
       });
+      console.log('Number of students after university filter:', filtered.length);
     }
     
     if (filters.major) {
       console.log('Filtering by major:', filters.major);
       filtered = filtered.filter(student => {
-        const major = student.education?.major || '';
-        console.log('Checking major:', major, '===', filters.major, '?', major === filters.major);
-        return major === filters.major;
+        console.log('Student object when filtering by major:', student);
+        // Try both formats and do case-insensitive, partial matching
+        const majorToCheck = (student.education?.major || 
+                          student.major || 
+                          student.Major || 
+                          '').toLowerCase();
+        const searchMajor = filters.major.toLowerCase();
+        console.log('Major comparison:', majorToCheck, 'vs', searchMajor);
+        // Use includes instead of exact match for more flexible searching
+        return majorToCheck.includes(searchMajor) || searchMajor.includes(majorToCheck);
       });
+      console.log('Number of students after major filter:', filtered.length);
     }
     
     if (filters.gpa) {
-      console.log('Filtering by GPA:', filters.gpa);
+      const targetGpa = parseFloat(filters.gpa);
+      console.log('Filtering by GPA:', targetGpa);
       filtered = filtered.filter(student => {
-        const gpa = student.education?.gpa || 0;
-        console.log('Checking GPA:', gpa, '>=', filters.gpa, '?', gpa >= filters.gpa);
-        return gpa >= filters.gpa;
+        // Try different possible GPA field locations
+        const studentGpa = parseFloat(student.education?.gpa || 
+                                    student.gpa || 
+                                    student.GPA || 
+                                    0);
+        console.log('GPA comparison:', studentGpa, '>=', targetGpa);
+        return studentGpa >= targetGpa;
       });
+      console.log('Number of students after GPA filter:', filtered.length);
     }
     
     if (filters.skills) {
       console.log('Filtering by skills:', filters.skills);
       filtered = filtered.filter(student => {
-        const hasSkill = student.skills?.includes(filters.skills) || false;
-        console.log('Checking skills:', student.skills, 'includes:', filters.skills, '?', hasSkill);
+        if (!student.skills || !Array.isArray(student.skills)) {
+          return false;
+        }
+        
+        // Convert skill arrays to lowercase for case-insensitive comparison
+        const studentSkills = student.skills.map(skill => skill.toLowerCase());
+        const searchSkill = filters.skills.toLowerCase();
+        
+        // Check if any of the student's skills include the search term
+        const hasSkill = studentSkills.some(skill => skill.includes(searchSkill));
+        console.log('Checking skills:', studentSkills, 'includes:', searchSkill, '?', hasSkill);
         return hasSkill;
       });
+      console.log('Number of students after skills filter:', filtered.length);
     }
     
     if (filters.graduationYear) {
-      console.log('Filtering by graduation year:', filters.graduationYear);
+      const targetYear = parseInt(filters.graduationYear);
+      console.log('Frontend: Filtering by graduation year:', targetYear);
       filtered = filtered.filter(student => {
-        const gradYear = new Date(student.education?.graduation_date).getFullYear();
-        console.log('Checking graduation year:', gradYear, '===', filters.graduationYear, '?', gradYear === filters.graduationYear);
-        return gradYear === filters.graduationYear;
+        // Log the entire student object to see all available fields
+        console.log('Frontend: Student object:', {
+          id: student.id,
+          name: student.name,
+          graduationYear: student.graduationYear
+        });
+        
+        // Use the graduationYear field directly
+        const gradYear = student.graduationYear;
+        
+        console.log('Frontend: Graduation year:', gradYear, 'Target year:', targetYear);
+        
+        if (gradYear === undefined || gradYear === null) {
+          console.log('Frontend: No graduation year found for student');
+          return false;
+        }
+        
+        return gradYear === targetYear;
       });
+      console.log('Frontend: Number of students after graduation year filter:', filtered.length);
     }
+
+    // Sort filtered students by the initial of their first name
+    filtered.sort((a, b) => {
+      const aFirst = (a.first_name || a.FirstName || a.name?.split(' ')[0] || '').toLowerCase();
+      const bFirst = (b.first_name || b.FirstName || b.name?.split(' ')[0] || '').toLowerCase();
+      if (aFirst[0] < bFirst[0]) return -1;
+      if (aFirst[0] > bFirst[0]) return 1;
+      return 0;
+    });
 
     console.log('Filtered students count:', filtered.length);
     setFilteredStudents(filtered);

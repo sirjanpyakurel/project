@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   TextField,
@@ -21,13 +21,62 @@ const SearchFilters = ({ onApplyFilters }) => {
     graduationYear: '',
   });
 
-  const majors = [
-    'Computer Science',
-    'Software Engineering',
-    'Data Science',
-    'Information Technology',
-    'Computer Engineering'
-  ];
+  const [majors, setMajors] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchMajors = async () => {
+      try {
+        console.log('Fetching majors from backend...');
+        const response = await fetch('http://localhost:3001/majors');
+        const data = await response.json();
+        console.log('Received majors from backend:', data);
+        
+        // If no majors were returned, use fallback list
+        let majorsList = data;
+        if (!data || data.length === 0) {
+          console.log('No majors returned from backend, using fallback list');
+          majorsList = [
+            'Computer Science',
+            'Business Administration',
+            'Engineering',
+            'Mechanical Engineering',
+            'Electrical Engineering',
+            'Biology',
+            'Psychology',
+            'Marketing',
+            'Finance',
+            'Mathematics'
+          ];
+        }
+        
+        setMajors(majorsList.sort());
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching majors:', err);
+        // Use fallback majors list in case of error
+        const fallbackMajors = [
+          'Computer Science',
+          'Business Administration',
+          'Engineering',
+          'Mechanical Engineering',
+          'Electrical Engineering',
+          'Biology',
+          'Psychology',
+          'Marketing',
+          'Finance',
+          'Mathematics'
+        ];
+        console.log('Using fallback majors list due to error');
+        setMajors(fallbackMajors);
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchMajors();
+  }, []);
 
   const skillsList = [
     'JavaScript',
@@ -93,13 +142,17 @@ const SearchFilters = ({ onApplyFilters }) => {
               value={filters.major}
               onChange={handleFilterChange}
               label="Major"
+              disabled={loading}
             >
               <MenuItem value="">All Majors</MenuItem>
-              {majors.map((major) => (
-                <MenuItem key={major} value={major}>
-                  {major}
-                </MenuItem>
-              ))}
+              {majors.map((major) => {
+                console.log('Rendering major option:', major);
+                return (
+                  <MenuItem key={major} value={major}>
+                    {major}
+                  </MenuItem>
+                );
+              })}
             </Select>
           </FormControl>
         </Grid>

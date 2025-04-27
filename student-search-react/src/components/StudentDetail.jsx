@@ -7,7 +7,9 @@ import {
   Avatar, 
   Chip,
   Paper,
-  Divider
+  Grid,
+  IconButton,
+  Tooltip
 } from '@mui/material';
 import { 
   ArrowBack, 
@@ -18,7 +20,8 @@ import {
   Phone, 
   GitHub, 
   LinkedIn,
-  Description
+  Description,
+  Launch
 } from '@mui/icons-material';
 import { generateStudentPDF } from '../pdfExport';
 import '../styles/StudentDetail.css';
@@ -54,14 +57,17 @@ const StudentDetail = ({ student }) => {
           startIcon={<ArrowBack />}
           onClick={() => navigate('/')}
           className="student-detail-back-button"
+          size="small"
         >
-          Back to Students
+          Back
         </Button>
         <Button
           variant="contained"
           color="primary"
           onClick={handleExportPDF}
           startIcon={<Description />}
+          className="student-detail-export-button"
+          size="small"
         >
           Export PDF
         </Button>
@@ -71,118 +77,134 @@ const StudentDetail = ({ student }) => {
         <Box className="student-detail-profile">
           <Avatar 
             className="student-detail-avatar"
-            sx={{ width: 120, height: 120 }}
+            sx={{ width: 100, height: 100 }}
           >
             {student.name.charAt(0)}
           </Avatar>
           <Typography variant="h4" className="student-detail-name">
             {student.name}
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
+          <Typography variant="subtitle1" color="text.secondary" sx={{ fontSize: '1rem' }}>
             {student.major} • {student.university}
           </Typography>
         </Box>
 
         <Box className="student-detail-info">
-          {/* Education Section */}
-          <Box className="info-section">
-            <Box className="section-title">
-              <School />
-              <Typography variant="h6">Education</Typography>
+          {/* Left Column */}
+          <Box className="left-column">
+            {/* Education Section */}
+            <Box className="info-section">
+              <Box className="section-title">
+                <School />
+                <Typography variant="h6">Education</Typography>
+              </Box>
+              <Box className="info-item">
+                <Typography variant="body2">
+                  <strong>University:</strong> {student.university}
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Major:</strong> {student.major}
+                </Typography>
+                <Typography variant="body2">
+                  <strong>GPA:</strong> {student.gpa}
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Graduation Year:</strong> {student.graduationYear}
+                </Typography>
+              </Box>
             </Box>
-            <Box className="info-item">
-              <Typography variant="body1">
-                <strong>University:</strong> {student.university}
-              </Typography>
-              <Typography variant="body1">
-                <strong>Major:</strong> {student.major}
-              </Typography>
-              <Typography variant="body1">
-                <strong>GPA:</strong> {student.gpa}
-              </Typography>
-              <Typography variant="body1">
-                <strong>Graduation Year:</strong> {student.graduationYear}
-              </Typography>
-            </Box>
-          </Box>
 
-          {/* Skills Section */}
-          <Box className="info-section">
-            <Box className="section-title">
-              <Code />
-              <Typography variant="h6">Skills</Typography>
-            </Box>
-            <Box className="skills-container">
-              {student.skills.map((skill, index) => (
-                <Chip
-                  key={index}
-                  label={skill}
-                  className="skill-chip"
-                />
-              ))}
-            </Box>
-          </Box>
-
-          {/* Contact Section */}
-          <Box className="info-section">
-            <Box className="section-title">
-              <Email />
-              <Typography variant="h6">Contact Information</Typography>
-            </Box>
-            <Box className="info-item">
-              <Typography variant="body1">
-                <Email sx={{ mr: 1 }} /> {student.email}
-              </Typography>
-              <Typography variant="body1">
-                <Phone sx={{ mr: 1 }} /> {student.phone}
-              </Typography>
-              {student.github && (
-                <Typography variant="body1">
-                  <GitHub sx={{ mr: 1 }} /> 
-                  <a href={student.github} target="_blank" rel="noopener noreferrer">
-                    GitHub Profile
-                  </a>
+            {/* Contact Section */}
+            <Box className="info-section">
+              <Box className="section-title">
+                <Email />
+                <Typography variant="h6">Contact</Typography>
+              </Box>
+              <Box className="info-item">
+                <Typography variant="body2">
+                  <Email sx={{ mr: 1, fontSize: '1rem' }} /> {student.email}
                 </Typography>
-              )}
-              {student.linkedin && (
-                <Typography variant="body1">
-                  <LinkedIn sx={{ mr: 1 }} /> 
-                  <a href={student.linkedin} target="_blank" rel="noopener noreferrer">
-                    LinkedIn Profile
-                  </a>
+                <Typography variant="body2">
+                  <Phone sx={{ mr: 1, fontSize: '1rem' }} /> {student.phone}
                 </Typography>
-              )}
-            </Box>
-          </Box>
-
-          {/* Projects Section */}
-          <Box className="info-section">
-            <Box className="section-title">
-              <Description />
-              <Typography variant="h6">Projects</Typography>
-            </Box>
-            {student.projects.map((project, index) => (
-              <Box key={index} className="project-item">
-                <Typography variant="h6" className="project-title">
-                  {project.title}
-                </Typography>
-                <Typography variant="body1" className="project-description">
-                  {project.description}
-                </Typography>
-                {project.technologies && (
-                  <Typography variant="body2" color="text.secondary">
-                    Technologies: {project.technologies}
+                {student.github && (
+                  <Typography variant="body2">
+                    <GitHub sx={{ mr: 1, fontSize: '1rem' }} /> 
+                    <a href={student.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                      GitHub
+                    </a>
                   </Typography>
                 )}
-                {project.link && (
+                {student.linkedin && (
                   <Typography variant="body2">
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                      View Project
+                    <LinkedIn sx={{ mr: 1, fontSize: '1rem' }} /> 
+                    <a href={student.linkedin} target="_blank" rel="noopener noreferrer" className="project-link">
+                      LinkedIn
                     </a>
                   </Typography>
                 )}
               </Box>
-            ))}
+            </Box>
+          </Box>
+
+          {/* Right Column */}
+          <Box className="right-column">
+            {/* Skills Section */}
+            <Box className="info-section">
+              <Box className="section-title">
+                <Code />
+                <Typography variant="h6">Skills</Typography>
+              </Box>
+              <Box className="skills-container">
+                {student.skills.map((skill, index) => (
+                  <Chip
+                    key={index}
+                    label={skill}
+                    className="skill-chip"
+                    size="small"
+                  />
+                ))}
+              </Box>
+            </Box>
+
+            {/* Projects Section */}
+            <Box className="info-section">
+              <Box className="section-title">
+                <Description />
+                <Typography variant="h6">Projects</Typography>
+              </Box>
+              <Box className="projects-container">
+                {student.projects.map((project, index) => (
+                  <Box className="project-item" key={index}>
+                    <Typography variant="h6" className="project-title">
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" className="project-description">
+                      {project.description}
+                    </Typography>
+                    {project.technologies && (
+                      <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.5 }}>
+                        <strong>Tech:</strong> {project.technologies}
+                      </Typography>
+                    )}
+                    {project.link && (
+                      <Button
+                        variant="text"
+                        color="primary"
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                        size="small"
+                        endIcon={<Launch sx={{ fontSize: '1rem' }} />}
+                      >
+                        View
+                      </Button>
+                    )}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Paper>

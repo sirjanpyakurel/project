@@ -28,6 +28,10 @@ const formatStudent = (student) => {
   // Handle both data formats
   const isNewFormat = student.education !== undefined;
   
+  // Get graduation date from either format
+  const gradDate = isNewFormat ? student.education.graduation_date : student['Graduation Date'];
+  const gradYear = gradDate ? new Date(gradDate).getFullYear() : null;
+  
   return {
     id: student.id,
     name: `${student.first_name} ${student.last_name}`,
@@ -36,9 +40,13 @@ const formatStudent = (student) => {
     university: isNewFormat ? student.education.university : student.University,
     major: isNewFormat ? student.education.major : student.Major,
     gpa: isNewFormat ? student.education.gpa : student.GPA,
-    graduationYear: isNewFormat 
-      ? new Date(student.education.graduation_date).getFullYear()
-      : new Date(student['Graduation Date']).getFullYear(),
+    graduationYear: gradYear,
+    // Preserve original graduation date fields
+    education: isNewFormat ? student.education : {
+      graduation_date: student['Graduation Date']
+    },
+    'Graduation Date': student['Graduation Date'],
+    graduationDate: gradDate,
     skills: student.skills || [],
     github: student.github || '',
     linkedin: student.linkedin || '',
@@ -88,9 +96,17 @@ app.get('/students', (req, res) => {
 
     if (graduationYear) {
       const targetYear = parseInt(graduationYear);
+      console.log('Backend: Filtering by graduation year:', targetYear);
       filteredStudents = filteredStudents.filter(student => {
         const gradDate = student.education?.graduation_date || student['Graduation Date'];
-        return new Date(gradDate).getFullYear() === targetYear;
+        console.log('Backend: Student ID:', student.id, 'Graduation date:', gradDate);
+        if (!gradDate) {
+          console.log('Backend: No graduation date found for student:', student.id);
+          return false;
+        }
+        const year = new Date(gradDate).getFullYear();
+        console.log('Backend: Parsed year:', year, 'Target year:', targetYear);
+        return year === targetYear;
       });
     }
 
@@ -104,6 +120,11 @@ app.get('/students', (req, res) => {
 
     // Format the response
     const formattedStudents = filteredStudents.map(formatStudent).filter(student => student !== null);
+    console.log('Backend: Sending formatted students:', formattedStudents.map(s => ({
+      id: s.id,
+      name: s.name,
+      graduationDate: s.education?.graduation_date || s['Graduation Date']
+    })));
     res.json(formattedStudents);
   } catch (error) {
     console.error('Error fetching students:', error);
@@ -127,11 +148,32 @@ app.get('/students/:id', (req, res) => {
 // Get available majors
 app.get('/majors', (req, res) => {
   try {
-    const majors = [...new Set(studentsData.map(student => student.education.major))];
+    console.log('Fetching majors from students data...');
+    console.log('Number of students in data:', studentsData.length);
+    
+    // Log a sample student to see structure
+    if (studentsData.length > 0) {
+      console.log('First student data structure:', JSON.stringify(studentsData[0], null, 2));
+    }
+    
+    const allMajors = studentsData.map(student => {
+      // Try all possible locations for major
+      const major = student.major || student.education?.major || student.Major;
+      console.log('Student ID:', student.id, 'Major:', major);
+      return major;
+    });
+    
+    console.log('All majors before filtering:', allMajors);
+    
+    const majors = [...new Set(allMajors.filter(Boolean))];
+    console.log('Unique majors after filtering:', majors, 'Count:', majors.length);
+    
+    // Even if no majors are found, return an empty array rather than error
     res.json(majors);
   } catch (error) {
-    console.error('Error fetching majors:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Error in /majors endpoint:', error);
+    // Return empty array instead of error to prevent frontend from breaking
+    res.json([]);
   }
 });
 
